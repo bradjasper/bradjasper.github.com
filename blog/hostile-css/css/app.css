@@ -1,0 +1,47 @@
+section {
+  width: 500px;
+  margin: 0 auto;
+}
+label .inner {
+  margin-top: 50px;
+  display: block;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+#code {
+  width: 500px;
+  height: 100px;
+  resize: none;
+  border: 1px solid #d9d9d9;
+  padding: 5px;
+}
+#arena {
+  margin-top: 50px;
+}
+.arena_section {
+  display: none;
+}
+#prev_css,
+#next_css {
+  font-size: 50px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 1px 2px 2px #eee;
+  border: 1px solid #f3f3f3;
+  display: none;
+}
+.summary {
+  margin-top: 20px;
+}
+#next_css {
+  left: auto;
+  right: 50px;
+}
+#css_url {
+  font-size: 13px;
+}
