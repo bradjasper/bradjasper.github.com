@@ -1,0 +1,626 @@
+.transparent {
+  background: url("/static/images/trans.png") repeat;
+}
+/* Typography.less
+ * Headings, body text, lists, code, and more for a versatile and durable typography system
+ * ---------------------------------------------------------------------------------------- */
+p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+p small {
+  font-size: 14px;
+  color: #bfbfbf;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: #262626;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  color: #bfbfbf;
+}
+h1 {
+  margin-bottom: 24px;
+  font-size: 30px;
+  line-height: 48px;
+}
+h1 small {
+  font-size: 18px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 48px;
+}
+h2 small {
+  font-size: 14px;
+}
+h3,
+h4,
+h5,
+h6 {
+  line-height: 48px;
+}
+h3 {
+  font-size: 18px;
+}
+h3 small {
+  font-size: 14px;
+}
+h4 {
+  font-size: 16px;
+}
+h4 small {
+  font-size: 12px;
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  font-size: 13px;
+  color: #bfbfbf;
+  text-transform: uppercase;
+}
+ul,
+ol {
+  margin: 0 0 24px 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+li {
+  line-height: 24px;
+  color: #808080;
+}
+ul.unstyled {
+  list-style: none;
+  margin-left: 0;
+}
+dl {
+  margin-bottom: 24px;
+}
+dl dt,
+dl dd {
+  line-height: 24px;
+}
+dl dt {
+  font-weight: bold;
+}
+dl dd {
+  margin-left: 12px;
+}
+hr {
+  margin: 20px 0 19px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+strong {
+  font-style: inherit;
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+  font-weight: inherit;
+  line-height: inherit;
+}
+.muted {
+  color: #bfbfbf;
+}
+blockquote {
+  margin-bottom: 24px;
+  border-left: 5px solid #eee;
+  padding-left: 15px;
+}
+blockquote p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+blockquote small {
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #bfbfbf;
+}
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+address {
+  display: block;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Andale Mono, Courier New, monospace;
+  font-size: 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px 5px 5px 5px;
+  -moz-border-radius: 3px 5px 5px 5px;
+  border-radius: 3px 5px 5px 5px;
+}
+code {
+  background-color: #fdf2e0;
+  color: rgba(0, 0, 0, 0.75);
+  padding: 1px 3px;
+}
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 11.5px;
+  margin: 0 0 24px;
+  line-height: 24px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px 5px 5px 5px;
+  -moz-border-radius: 3px 5px 5px 5px;
+  border-radius: 3px 5px 5px 5px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.clear {
+  clear: both;
+}
+hr {
+  clear: both;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 25px;
+  color: #545454;
+  background: url("/static/images/bg_pattern.png") repeat;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "";
+  font-weight: 600;
+}
+a img {
+  border: 0;
+}
+a {
+  color: #296daf;
+}
+a:visited {
+  color: #4e93d6;
+}
+#outer {
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-spacing: 0;
+}
+#outer td {
+  vertical-align: top;
+}
+#content {
+  max-width: 900px;
+}
+h1 {
+  font-size: 40px;
+  line-height: 36px;
+  color: #262626;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+.section {
+  font-size: 15px;
+  line-height: 22px;
+  display: block;
+}
+.section.contact {
+  margin-top: 30px;
+}
+.container {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.container h2 a {
+  font-size: 12.8px;
+  vertical-align: top;
+}
+.container ul {
+  margin: 0;
+  padding-left: 30px;
+  position: relative;
+}
+.container ul li {
+  color: #404040;
+}
+.container.left ul {
+  left: 20px;
+}
+.container.left img {
+  float: left;
+  margin: 0 80px 40px 0;
+}
+.container.right img {
+  float: right;
+  margin: 0 0 40px 80px;
+}
+#pppiano {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+#pppiano h2 a {
+  font-size: 12.8px;
+  vertical-align: top;
+}
+#pppiano ul {
+  margin: 0;
+  padding-left: 30px;
+  position: relative;
+}
+#pppiano ul li {
+  color: #404040;
+}
+#pppiano.left ul {
+  left: 20px;
+}
+#pppiano.left img {
+  float: left;
+  margin: 0 80px 40px 0;
+}
+#pppiano.right img {
+  float: right;
+  margin: 0 0 40px 80px;
+}
+#pppiano ul {
+  left: 20px;
+}
+#pppiano img {
+  float: left;
+  margin: 0 80px 40px 0;
+}
+#pppiano img {
+  padding-bottom: 10px;
+}
+#domaingroovy {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+#domaingroovy h2 a {
+  font-size: 12.8px;
+  vertical-align: top;
+}
+#domaingroovy ul {
+  margin: 0;
+  padding-left: 30px;
+  position: relative;
+}
+#domaingroovy ul li {
+  color: #404040;
+}
+#domaingroovy.left ul {
+  left: 20px;
+}
+#domaingroovy.left img {
+  float: left;
+  margin: 0 80px 40px 0;
+}
+#domaingroovy.right img {
+  float: right;
+  margin: 0 0 40px 80px;
+}
+#domaingroovy img {
+  float: right;
+  margin: 0 0 40px 80px;
+}
+#goviva {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+#goviva h2 a {
+  font-size: 12.8px;
+  vertical-align: top;
+}
+#goviva ul {
+  margin: 0;
+  padding-left: 30px;
+  position: relative;
+}
+#goviva ul li {
+  color: #404040;
+}
+#goviva.left ul {
+  left: 20px;
+}
+#goviva.left img {
+  float: left;
+  margin: 0 80px 40px 0;
+}
+#goviva.right img {
+  float: right;
+  margin: 0 0 40px 80px;
+}
+#goviva img {
+  float: right;
+  margin: 0 0 40px 80px;
+}
+#rentacarnow {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+#rentacarnow h2 a {
+  font-size: 12.8px;
+  vertical-align: top;
+}
+#rentacarnow ul {
+  margin: 0;
+  padding-left: 30px;
+  position: relative;
+}
+#rentacarnow ul li {
+  color: #404040;
+}
+#rentacarnow.left ul {
+  left: 20px;
+}
+#rentacarnow.left img {
+  float: left;
+  margin: 0 80px 40px 0;
+}
+#rentacarnow.right img {
+  float: right;
+  margin: 0 0 40px 80px;
+}
+#rentacarnow ul {
+  left: 20px;
+}
+#rentacarnow img {
+  float: left;
+  margin: 0 80px 40px 0;
+}
+#blogcatalog {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+#blogcatalog h2 a {
+  font-size: 12.8px;
+  vertical-align: top;
+}
+#blogcatalog ul {
+  margin: 0;
+  padding-left: 30px;
+  position: relative;
+}
+#blogcatalog ul li {
+  color: #404040;
+}
+#blogcatalog.left ul {
+  left: 20px;
+}
+#blogcatalog.left img {
+  float: left;
+  margin: 0 80px 40px 0;
+}
+#blogcatalog.right img {
+  float: right;
+  margin: 0 0 40px 80px;
+}
+#blogcatalog img {
+  float: right;
+  margin: 0 0 40px 80px;
+}
+.col {
+  width: 40%;
+  margin-right: 10%;
+  margin-bottom: 30px;
+  float: left;
+}
+.col h3 {
+  line-height: 20px;
+  margin: 10px 0;
+}
+.col ul {
+  padding-left: 0;
+}
+.medium {
+  width: 40%;
+  margin-right: 10%;
+  margin-bottom: 30px;
+  float: left;
+}
+.medium h3 {
+  line-height: 20px;
+  margin: 10px 0;
+}
+.medium ul {
+  padding-left: 0;
+}
+.small {
+  width: 50%;
+}
+#other .section {
+  float: left;
+  font-size: 90%;
+  margin-bottom: 20px;
+}
+#other .section ul {
+  margin: 0;
+  list-style: none;
+}
+#contact .email {
+  font-weight: bold;
+}
+#contact .sitelinks {
+  float: right;
+  margin: 40px;
+}
+#header {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+#header img {
+  float: left;
+  margin-right: 25px;
+}
+#header h1 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+#header .tagline {
+  font-size: 15px;
+}
+#footer {
+  border-top: 1px solid #ccc;
+}
+#footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+#footer ul li {
+  float: left;
+  padding-right: 26px;
+}
+.minilogo {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+.minilogo img {
+  padding-top: 7px;
+}
+.minilogo .inner {
+  color: black;
+  font-weight: bold;
+}
+.blog #header img {
+  margin-right: 10px;
+  margin-top: -8px;
+}
+.blog #header .view-profile {
+  font-size: 14px;
+}
+.blog .entry {
+  max-width: 600px;
+  margin-bottom: 144px;
+}
+.blog .entry .date {
+  color: #808080;
+}
+.blog #call-to-action {
+  margin-top: 72px;
+}
+.blog #call-to-action img {
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 20px;
+}
+.blog h1 {
+  font-size: 40px;
+  line-height: 46px;
+}
+#recent_posts {
+  margin: 0;
+  padding: 0;
+}
+#recent_posts li {
+  list-style: none;
+}
+#comments {
+  display: none;
+}
+#show_comments {
+  color: gray;
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+@media print, screen and (max-width: 1200px) {
+  #about {
+    float: right;
+    margin-top: 0;
+  }
+  #about .section {
+    margin: 0;
+    display: inline;
+  }
+  #content {
+    margin-left: 0;
+    clear: both;
+  }
+}
+@media print, screen and (max-width: 720px) {
+  #header img {
+    padding-bottom: 20px;
+    display: block;
+  }
+  #content {
+    padding: 10px 20px;
+  }
+  #content img {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+  #content p {
+    display: block;
+  }
+  #content #domaingroovy ul,
+  #content #blogcatalog ul {
+    width: 80%;
+    left: 0;
+  }
+  .blog #header img {
+    float: left;
+  }
+  .medium {
+    display: block;
+    width: auto;
+  }
+  .small {
+    width: 50%;
+  }
+  #other {
+    float: none;
+  }
+}
+@media print, screen and (max-width: 480px) {
+  #content img {
+    max-width: 250px;
+  }
+}

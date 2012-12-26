@@ -1,0 +1,81 @@
+body {
+    background: #000 url("../images/bg.jpg") repeat;
+    font-size: 110%;
+    font-family: Helvetica, Verdana, "Times New Roman";
+}
+
+a {
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.header {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.logo {
+    border: 0;
+}
+
+a img {
+    border: 0;
+}
+
+.text {
+	color: white;
+    background: url("../images/transparent.png") repeat;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.testimonial {
+    color: white;
+    background: url("../images/transparent.png") repeat;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-align: center;
+}
+
+.inner {
+    padding: 15px;
+}
+
+.testimonial a {
+    font-weight: bold;
+}
+
+.big {
+	font-weight: bold;
+	font-size: 130%;
+}
+
+.list {
+    margin: 10px 0;
+}
+
+.ipad {
+    margin: 30px 0;
+    padding: 63px 0;
+    text-align: center;
+    background: url("../images/ipad-frame.png") 149px 0 no-repeat;
+}
+
+.featured, .newsletter {
+    margin-top: 30px;
+}
+
+.featured img {
+    margin: 10px 0;
+}
+
+.purchase {
+    margin: 80px 0;
+    text-align: center;
+}

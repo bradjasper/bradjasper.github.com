@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+
+import json
+import sys
+from BeautifulSoup import BeautifulSoup
+import requests
+
+def url_soup(url):
+	return BeautifulSoup(requests.get(url).content)
+
+sites = sys.argv[1:]
+links = []
+
+for site in sites:
+	if not site.startswith("http://"):
+		site = "http://%s" % site
+
+	try:
+		soup = url_soup(site)
+
+		print site
+
+		for link in soup.findAll("link", rel="stylesheet"):
+			links.append(link.get("href"))
+
+		print json.dumps(links)
+	except:
+		print "Couldn't do", site
+
+
+	"""
+	for style in soup.findAll("style"):
+		print style.text
+		print
+	"""
+
