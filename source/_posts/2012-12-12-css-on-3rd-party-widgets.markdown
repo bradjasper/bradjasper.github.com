@@ -12,5 +12,3 @@ This is because every website has different CSS rules, and you can't possible te
 
 Until now, introducing the 
 
-{% img class http://images.contactmusic.com/videoimages/sbmg/michael-jackson-give-in-to-me.jpg width height 'title text' 'alt text' %}
-
