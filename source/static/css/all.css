@@ -198,7 +198,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 25px;
+  line-height: 22px;
   color: #545454;
   background: url("/static/images/white_bed_sheet.png") repeat;
 }
@@ -248,6 +248,9 @@ h1 {
   margin-top: 40px;
   margin-bottom: 50px;
 }
+.container h2 {
+  display: inline;
+}
 .container h2 a {
   font-size: 12.8px;
   vertical-align: top;
@@ -274,6 +277,9 @@ h1 {
 #pppiano {
   margin-top: 40px;
   margin-bottom: 50px;
+}
+#pppiano h2 {
+  display: inline;
 }
 #pppiano h2 a {
   font-size: 12.8px;
@@ -312,6 +318,9 @@ h1 {
   margin-top: 40px;
   margin-bottom: 50px;
 }
+#domaingroovy h2 {
+  display: inline;
+}
 #domaingroovy h2 a {
   font-size: 12.8px;
   vertical-align: top;
@@ -343,6 +352,9 @@ h1 {
   margin-top: 40px;
   margin-bottom: 50px;
 }
+#goviva h2 {
+  display: inline;
+}
 #goviva h2 a {
   font-size: 12.8px;
   vertical-align: top;
@@ -373,6 +385,9 @@ h1 {
 #rentacarnow {
   margin-top: 40px;
   margin-bottom: 50px;
+}
+#rentacarnow h2 {
+  display: inline;
 }
 #rentacarnow h2 a {
   font-size: 12.8px;
@@ -407,6 +422,9 @@ h1 {
 #blogcatalog {
   margin-top: 40px;
   margin-bottom: 50px;
+}
+#blogcatalog h2 {
+  display: inline;
 }
 #blogcatalog h2 a {
   font-size: 12.8px;
