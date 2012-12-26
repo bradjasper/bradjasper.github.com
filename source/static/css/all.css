@@ -200,15 +200,16 @@ body {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 25px;
   color: #545454;
-  background: url("/static/images/bg_pattern.png") repeat;
+  background: url("/static/images/white_bed_sheet.png") repeat;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "";
-  font-weight: 600;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #262626;
+  font-weight: 400;
 }
 a img {
   border: 0;
@@ -234,14 +235,6 @@ a:visited {
 h1 {
   font-size: 40px;
   line-height: 36px;
-  color: #262626;
-}
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
 }
 .section {
   font-size: 15px;
@@ -489,7 +482,6 @@ h6 {
 }
 #header {
   padding: 20px 0;
-  border-bottom: 1px solid #ccc;
 }
 #header img {
   float: left;
@@ -503,14 +495,28 @@ h6 {
   font-size: 15px;
 }
 #footer {
-  border-top: 1px solid #ccc;
+  padding-top: 75px;
 }
-#footer ul {
+#footer #octopress {
+  float: right;
+  padding-bottom: 10px;
+}
+#footer #octopress img {
+  opacity: .75;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
+#footer #octopress img:hover {
+  opacity: 1;
+}
+#nav {
   list-style: none;
   margin: 0;
-  padding: 0 0 20px 0;
+  padding: 5px 0 15px 0;
+  font-size: 14px;
 }
-#footer ul li {
+#nav li {
   float: left;
   padding-right: 26px;
 }
