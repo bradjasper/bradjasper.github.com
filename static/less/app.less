@@ -4,12 +4,13 @@ body {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 25px;
   color: lighten(@grayDark, 8%);
-  background: url("/static/images/bg_pattern.png") repeat;
+  background: url("/static/images/white_bed_sheet.png") repeat;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "";
-  font-weight: 600;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: @grayDarker;
+  font-weight: 400;
 }
 
 a img {
@@ -44,11 +45,6 @@ a:visited {
 h1 {
   font-size: @basefont * 2.5;
   line-height: @baseline * 1.5;
-  color: @grayDarker;
-}
-
-h2, h3, h4, h5, h6 {
-  font-weight: 400;
 }
 
 .section {
@@ -175,7 +171,6 @@ h2, h3, h4, h5, h6 {
 
 #header {
   padding: 20px 0;
-  border-bottom: 1px solid #ccc;
 
   img {
     float: left;
@@ -193,17 +188,33 @@ h2, h3, h4, h5, h6 {
 }
 
 #footer {
-  border-top: 1px solid #ccc;
+  padding-top: 75px;
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0 0 20px 0;
+  #octopress {
+    float: right;
+    padding-bottom: 10px;
 
-    li {
-      float: left;
-      padding-right: 26px;
+    img {
+      opacity: .75;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out;        
+      &:hover {
+        opacity: 1;
+      }
     }
+  }
+}
+
+#nav {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0 15px 0;
+  font-size: 14px;
+
+  li {
+    float: left;
+    padding-right: 26px;
   }
 }
 
