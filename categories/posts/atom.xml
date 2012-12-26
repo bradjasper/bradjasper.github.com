@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: posts | Brad Jasper, Raleigh Full-stack Software Developer]]></title>
+  <link href="http://bradjasper.github.com/categories/posts/atom.xml" rel="self"/>
+  <link href="http://bradjasper.github.com/"/>
+  <updated>2012-12-25T21:06:19-05:00</updated>
+  <id>http://bradjasper.github.com/</id>
+  <author>
+    <name><![CDATA[Brad Jasper]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Left]]></title>
+    <link href="http://bradjasper.github.com/blog/statsd-and-graphite-gotchas/"/>
+    <updated>2012-12-12T00:00:00-05:00</updated>
+    <id>http://bradjasper.github.com/blog/statsd-and-graphite-gotchas</id>
+    <content type="html"><![CDATA[<p>Left is a clean, whitespace-happy layout for <a href="https://github.com/mojombo/jekyll">Jekyll</a>.</p>
+
+<p>This is designed to be an easy layout to modify for your own blog. It was
+extracted from <a href="http://zachholman.com">zachholman.com</a>, which means it was battle-hardened from
+years of posting serious blog posts about emoji and swear words.</p>
+
+<p>You're actually reading an example post right now. See how cool it is? Oh, be
+quiet, you're making me blush.</p>
+
+<hr />
+
+<p>You'll want to <a href="https://github.com/holman/left#readme">get the code</a> and read the README to learn how to
+install and set up Left for your own purposes.</p>
+
+<p><div>
+  <pre><code class='ruby'>def foo
+  puts 'foo'
+end</code></pre>
+</div>
+</p>
+
+<p>If you have any questions, follow and ping me on Twitter- I'm
+<a href="https://twitter.com/holman">@holman</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Embedding 3rd Party Widgets in Hostile CSS Environments]]></title>
+    <link href="http://bradjasper.github.com/blog/css-on-3rd-party-widgets/"/>
+    <updated>2012-12-12T00:00:00-05:00</updated>
+    <id>http://bradjasper.github.com/blog/css-on-3rd-party-widgets</id>
+    <content type="html"><![CDATA[<p>If you've ever written a 3rd party widget that's embeded in another website, you may have run up against styling your widget in a hostile CSS environment.</p>
+
+<p>The problem is you've written CSS to work one way, but as soon as it's injected into another website environment it begins to break.</p>
+
+<p>This is because every website has different CSS rules, and you can't possible test all of them on your own.</p>
+
+<p>Until now, introducing the</p>
+
+<p><img class="class" src="http://images.contactmusic.com/videoimages/sbmg/michael-jackson-give-in-to-me.jpg" title="title text" alt="alt text"></p>
+]]></content>
+  </entry>
+  
+</feed>
