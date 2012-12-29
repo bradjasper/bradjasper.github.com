@@ -14,11 +14,15 @@ has_header: true
     
     <h1>Blog</h1>
 
-    <ul>
-      {% for post in paginator.posts %}
-        <li><span class="date">{{ post.date_formatted }}</span> <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
+    {% if paginator.posts %}
+      <ul>
+        {% for post in paginator.posts %}
+          <li><span class="date">{{ post.date_formatted }}</span> <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      Coming Soon
+    {% endif %}
 
 
   </div>
