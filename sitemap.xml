@@ -2,22 +2,22 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://localhost/about/</loc>
-        <lastmod>2012-12-29T14:39:13-05:00</lastmod>
+        <lastmod>2012-12-29T14:44:20-05:00</lastmod>
     </url>
     <url>
         <loc>http://localhost/blog/archives/</loc>
-        <lastmod>2012-12-29T14:39:13-05:00</lastmod>
+        <lastmod>2012-12-29T14:44:20-05:00</lastmod>
     </url>
     <url>
         <loc>http://localhost/blog/</loc>
-        <lastmod>2012-12-29T14:40:33-05:00</lastmod>
+        <lastmod>2012-12-29T14:44:20-05:00</lastmod>
     </url>
     <url>
         <loc>http://localhost/</loc>
-        <lastmod>2012-12-29T14:39:13-05:00</lastmod>
+        <lastmod>2012-12-29T14:44:20-05:00</lastmod>
     </url>
     <url>
         <loc>http://localhost/slash/</loc>
-        <lastmod>2012-12-29T14:39:13-05:00</lastmod>
+        <lastmod>2012-12-29T14:44:20-05:00</lastmod>
     </url>
 </urlset>
