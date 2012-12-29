@@ -1,13 +1,43 @@
-{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
-{% include head.html %}
-<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
-  <div id="outer">
-      <header role="banner">{% include header.html %}</header>
-    <div id="content">
-      {{ content | expand_urls: root_url }}
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Welcome to Foundation | Blog</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="/static/css/foundation.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+
+  <script src="/static/js/modernizr.foundation.js"></script>
+</head>
+<body>
+
+  {% if page.has_header %}
+    <div class="row blog_about">
+      <div class="twelve columns">
+        <a href="{{ site.url }}">Brad Jasper</a> is a freelance web and mobile developer living in Raleigh, North Carolina.
+        <hr>
+      </div>
     </div>
-    <footer role="contentinfo">{% include footer.html %}</footer>
-    {% include after_footer.html %}
-  </div>
+  {% endif %}
+
+  {{ content | expand_urls: root_url }}
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/foundation.min.js"></script>
+  <script src="/static/js/app.js"></script>
 </body>
 </html>
