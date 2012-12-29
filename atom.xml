@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
+  <link href="http://localhost/atom.xml" rel="self"/>
+  <link href="http://localhost/"/>
+  <updated>2012-12-29T14:40:34-05:00</updated>
+  <id>http://localhost/</id>
+  <author>
+    <name><![CDATA[Brad Jasper]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
