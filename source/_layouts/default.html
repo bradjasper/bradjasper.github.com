@@ -11,7 +11,11 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>Welcome to Foundation | Blog</title>
+  <title>{{ page.title|default:site.title }}</title>
+
+  <meta name="author" content="Brad Jasper">
+  <meta name="description" content="Brad Jasper is a freelance software developer living in Raleigh, North Carolina">
+  
 
   <!-- Included CSS Files (Uncompressed) -->
   <!--
@@ -39,5 +43,19 @@
   <script src="/static/js/jquery.js"></script>
   <script src="/static/js/foundation.min.js"></script>
   <script src="/static/js/app.js"></script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11057852-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
 </body>
 </html>
