@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
-  <link href="http://localhost/atom.xml" rel="self"/>
-  <link href="http://localhost/"/>
-  <updated>2012-12-29T14:44:20-05:00</updated>
-  <id>http://localhost/</id>
+  <link href="http://bradjasper.github.com/atom.xml" rel="self"/>
+  <link href="http://bradjasper.github.com/"/>
+  <updated>2012-12-29T14:45:12-05:00</updated>
+  <id>http://bradjasper.github.com/</id>
   <author>
     <name><![CDATA[Brad Jasper]]></name>
     
