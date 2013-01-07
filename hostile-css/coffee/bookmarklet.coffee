@@ -59,8 +59,7 @@ load_script "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js", 
         url = css[index]
         #$("body").css("background-image", "url('#{url}')")
         #$("body").css("background-repeat", "repeat")
-        $("#hostilecss_bookmarklet link").attr("href", url)
-
+        $("#hostilecss_css").attr("href", url)
         $("#hostilecss_bookmarklet").html("CSS <a target='_blank' href='#{url}'>#{url}</a>")
 
     setup = ->
@@ -70,8 +69,10 @@ load_script "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js", 
         loading.css("padding", "10px")
         loading.css("bottom", "0px")
         loading.css("left", "0px")
-        $("<link>", rel:"stylesheet", type: "text/css").appendTo(loading)
-        loading.appendTo("body")
+        $("<link>", id: "hostilecss_css", rel:"stylesheet", type: "text/css").appendTo($("head"))
+#        $('head').append('<link rel="stylesheet" id="hostilecss_css" type="text/css" />');
+        loading.prependTo("body")
+        alert("BOOM")
 
         $(document).keydown (e) ->
             switch e.keyCode

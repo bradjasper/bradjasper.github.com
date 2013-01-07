@@ -70,7 +70,7 @@
     update = function() {
       var url;
       url = css[index];
-      $("#hostilecss_bookmarklet link").attr("href", url);
+      $("#hostilecss_css").attr("href", url);
       return $("#hostilecss_bookmarklet").html("CSS <a target='_blank' href='" + url + "'>" + url + "</a>");
     };
     setup = function() {
@@ -84,10 +84,12 @@
       loading.css("bottom", "0px");
       loading.css("left", "0px");
       $("<link>", {
+        id: "hostilecss_css",
         rel: "stylesheet",
         type: "text/css"
-      }).appendTo(loading);
-      loading.appendTo("body");
+      }).appendTo($("head"));
+      loading.prependTo("body");
+      alert("BOOM");
       return $(document).keydown(function(e) {
         switch (e.keyCode) {
           case 37:
