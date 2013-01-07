@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Embeding Widgets in Hostile CSS Environments</title>
+
+  <meta name="author" content="Brad Jasper">
+  <meta name="description" content="Brad Jasper is a freelance software developer living in Raleigh, North Carolina">
+  
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="/static/css/foundation.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+
+  <script src="/static/js/modernizr.foundation.js"></script>
+</head>
+<body>
+
+  
+    <div class="row blog_about">
+      <div class="twelve columns">
+        <a href="http://bradjasper.com">Brad Jasper</a> is a freelance web and mobile developer living in Raleigh, North Carolina.
+        <hr>
+      </div>
+    </div>
+  
+
+  <div class="row page">
+
+  <!-- Main Blog Content -->
+  <div class="twelve columns blog_entry" role="content">
+
+    <article>
+      
+      <div class="row">
+        <div class="mobile-four ten push-two columns">
+          <h1>Embeding Widgets in Hostile CSS Environments</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mobile-four eight columns centered">
+            <h6 class="subheader">Dec 30<span>th</span>, 2012</h6>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="eight mobile-four columns centered">
+          <p>Over time I&#8217;ve built a few JavaScript embeddable widgets and have always struggled with getting them to look exactly right on every website.</p>
+
+<p>This is because of hostile CSS environments, or not knowing ahead of time what kind of CSS your widget will be sharing the page with.</p>
+
+<p>Note: You can use IFrames here but they represent their own set of challenges.</p>
+
+<p>When you&#8217;re widget is added to someone&#8217;s website, it is suddenly under the websites control in terms of styling.</p>
+
+<div><script src='https://gist.github.com/996818.js'></script>
+<noscript><pre><code>@@ -590,7 +590,7 @@ class SpritesTest &lt; Test::Unit::TestCase
+  it &quot;should generate a sprite from nested folders&quot; do
+    css = render &lt;&lt;-SCSS
+-     @import &quot;nested/*.png&quot;;
++     @import &quot;nested/**/*.png&quot;;
+      @include all-nested-sprites;
+    SCSS
+    assert_correct css, &lt;&lt;-CSS</code></pre></noscript></div>
+
+
+
+
+<blockquote>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</blockquote>
+
+
+<p>It&#8217;s very common for paddings, margins, line-heights and even colors to become distorted in ways you never intended.</p>
+
+<p>Resets can be helpful here, but in my experience don&#8217;t completely solve the problem. Not to mention the can add lots of bloat to an otherwise small footprint widget.</p>
+
+<p>To solve this problem, I created the hostile CSS tool.</p>
+
+<h1>Hostile CSS Checker Tool</h1>
+
+<p>The tool is a simple way to expose your embeddable widget to common and extreme CSS environments.</p>
+
+<p>Enter your code in the textarea, click Submit, and it will load a CSS file from a popular website. You can click Next/Prev to cycle through all 250 CSS files (you can also use your left/right keyboard keys).</p>
+
+<p>As you cycle through the CSS files, if you notice any small changes in your widget, you can harden that part of your CSS with !important statements (one of the few times this is considered OK).</p>
+
+        </div>
+      </div>
+
+    </article>
+
+    <div class="row">
+      <hr>
+      <div class="eight mobile-four centered columns">
+        <p>Check out my latest project that helps you <a href="http://domaingroovy.com">find available domain names</a> for your next startup or side project.
+
+        <br /><br />
+
+        <a href="http://twitter.com/bradjasper">Follow me on Twitter &raquo;</a>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- End Main Content -->
+
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/foundation.min.js"></script>
+  <script src="/static/js/app.js"></script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11057852-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+</body>
+</html>
