@@ -4,7 +4,7 @@
   <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
   <link href="http://bradjasper.com/atom.xml" rel="self"/>
   <link href="http://bradjasper.com/"/>
-  <updated>2012-12-30T22:05:18-05:00</updated>
+  <updated>2013-01-11T18:57:54-05:00</updated>
   <id>http://bradjasper.com/</id>
   <author>
     <name><![CDATA[Brad Jasper]]></name>
@@ -12,52 +12,5 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Embeding Widgets in Hostile CSS Environments]]></title>
-    <link href="http://bradjasper.com/blog/embeding-widgets-in-hostile-css-environments/"/>
-    <updated>2012-12-30T22:01:00-05:00</updated>
-    <id>http://bradjasper.com/blog/embeding-widgets-in-hostile-css-environments</id>
-    <content type="html"><![CDATA[<p>Over time I&#8217;ve built a few JavaScript embeddable widgets and have always struggled with getting them to look exactly right on every website.</p>
-
-<p>This is because of hostile CSS environments, or not knowing ahead of time what kind of CSS your widget will be sharing the page with.</p>
-
-<p>Note: You can use IFrames here but they represent their own set of challenges.</p>
-
-<p>When you&#8217;re widget is added to someone&#8217;s website, it is suddenly under the websites control in terms of styling.</p>
-
-<div><script src='https://gist.github.com/996818.js'></script>
-<noscript><pre><code>@@ -590,7 +590,7 @@ class SpritesTest &lt; Test::Unit::TestCase
-  it &quot;should generate a sprite from nested folders&quot; do
-    css = render &lt;&lt;-SCSS
--     @import &quot;nested/*.png&quot;;
-+     @import &quot;nested/**/*.png&quot;;
-      @include all-nested-sprites;
-    SCSS
-    assert_correct css, &lt;&lt;-CSS</code></pre></noscript></div>
-
-
-
-
-<blockquote>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</blockquote>
-
-
-<p>It&#8217;s very common for paddings, margins, line-heights and even colors to become distorted in ways you never intended.</p>
-
-<p>Resets can be helpful here, but in my experience don&#8217;t completely solve the problem. Not to mention the can add lots of bloat to an otherwise small footprint widget.</p>
-
-<p>To solve this problem, I created the hostile CSS tool.</p>
-
-<h1>Hostile CSS Checker Tool</h1>
-
-<p>The tool is a simple way to expose your embeddable widget to common and extreme CSS environments.</p>
-
-<p>Enter your code in the textarea, click Submit, and it will load a CSS file from a popular website. You can click Next/Prev to cycle through all 250 CSS files (you can also use your left/right keyboard keys).</p>
-
-<p>As you cycle through the CSS files, if you notice any small changes in your widget, you can harden that part of your CSS with !important statements (one of the few times this is considered OK).</p>
-]]></content>
-  </entry>
   
 </feed>
