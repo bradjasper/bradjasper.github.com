@@ -4,7 +4,7 @@
   <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
   <link href="http://bradjasper.com/atom.xml" rel="self"/>
   <link href="http://bradjasper.com/"/>
-  <updated>2013-04-23T10:06:59-04:00</updated>
+  <updated>2013-05-17T16:30:17-04:00</updated>
   <id>http://bradjasper.com/</id>
   <author>
     <name><![CDATA[Brad Jasper]]></name>
@@ -12,5 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Follow your favorite people on Hacker News]]></title>
+    <link href="http://bradjasper.com/blog/follow-a-hacker-news-users-comments-with-rss/"/>
+    <updated>2013-05-17T13:09:00-04:00</updated>
+    <id>http://bradjasper.com/blog/follow-a-hacker-news-users-comments-with-rss</id>
+    <content type="html"><![CDATA[<p>On Hacker News I have always wanted a way to stay up-to-date with people who make really insightful comments.</p>
+
+<p>There's a lot of great stuff out there&mdash;but it's hard to keep up with it all. This is actually a perfect use-case for RSS: high-quality content that's not updated very frequently.</p>
+
+<p>Unfortunately, Hacker News doesn't support RSS for comments out of the box.</p>
+
+<p>So, with some help from the official <a href="https://www.hnsearch.com/api">Hacker News Search API</a> and <a href="http://pipes.yahoo.com/pipes/">Yahoo! Pipes</a>, I strung together an RSS feed that pulls in the latest comments from any user.</p>
+
+<blockquote>
+http://pipes.yahoo.com/pipes/pipe.run?_id=9c88dd117c9c12408e5f37e5a610ad4a&_render=rss&username=<strong>USERNAME</strong>
+</blockquote>
+
+
+<p>Replace <strong>USERNAME</strong> in the URL above with any valid Hacker News username, and you will receive an RSS feed of their 50 most recent comments.</p>
+
+<p><em> Want these in your inbox instead? Try this <a href="https://ifttt.com/recipes/4447">IFTTT recipe</a>. Want all comment feeds merged into one? Try this <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=35b9f23463805cb43e8f674256319b58">Yahoo! Pipes recipe</a>.</p>
+]]></content>
+  </entry>
   
 </feed>

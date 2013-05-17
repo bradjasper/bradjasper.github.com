@@ -7,7 +7,7 @@ a {
   color: #336699;
 }
 img#me {
-  border-radius: 100px    ;
+  border-radius: 100px;
 }
 .blog_about {
   margin-top: 20px;
@@ -48,7 +48,7 @@ img#me {
   padding-bottom: 100px;
 }
 .page article {
-  padding-top: 75px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 @media only screen and (max-width: 1023px) {

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Follow your favorite people on Hacker News</title>
+
+  <meta name="author" content="Brad Jasper">
+  <meta name="description" content="Brad Jasper is a freelance software developer living in Raleigh, North Carolina">
+  
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="/static/css/foundation.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+
+  <script src="/static/js/modernizr.foundation.js"></script>
+</head>
+<body>
+
+  
+    <div class="row blog_about">
+      <div class="twelve columns">
+        <a href="http://bradjasper.com">Brad Jasper</a> is a freelance web and mobile developer living in Raleigh, North Carolina.
+        <hr>
+      </div>
+    </div>
+  
+
+  <div class="row page">
+
+  <!-- Main Blog Content -->
+  <div class="twelve columns blog_entry" role="content">
+
+    <article>
+      
+      <div class="row">
+        <div class="mobile-four ten push-two columns">
+          <h1>Follow your favorite people on Hacker News</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mobile-four eight columns centered">
+            <h6 class="subheader"></h6>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="eight mobile-four columns centered">
+          <p>On Hacker News I have always wanted a way to stay up-to-date with people who make really insightful comments.</p>
+
+<p>There's a lot of great stuff out there&mdash;but it's hard to keep up with it all. This is actually a perfect use-case for RSS: high-quality content that's not updated very frequently.</p>
+
+<p>Unfortunately, Hacker News doesn't support RSS for comments out of the box.</p>
+
+<p>So, with some help from the official <a href="https://www.hnsearch.com/api">Hacker News Search API</a> and <a href="http://pipes.yahoo.com/pipes/">Yahoo! Pipes</a>, I strung together an RSS feed that pulls in the latest comments from any user.</p>
+
+<blockquote>
+http://pipes.yahoo.com/pipes/pipe.run?_id=9c88dd117c9c12408e5f37e5a610ad4a&_render=rss&username=<strong>USERNAME</strong>
+</blockquote>
+
+
+<p>Replace <strong>USERNAME</strong> in the URL above with any valid Hacker News username, and you will receive an RSS feed of their 50 most recent comments.</p>
+
+<p><em> Want these in your inbox instead? Try this <a href="https://ifttt.com/recipes/4447">IFTTT recipe</a>. Want all comment feeds merged into one? Try this <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=35b9f23463805cb43e8f674256319b58">Yahoo! Pipes recipe</a>.</p>
+
+        </div>
+      </div>
+
+    </article>
+
+    <div class="row">
+      <hr>
+      <div class="eight mobile-four centered columns">
+        <p>Check out my latest project that helps you <a href="http://domaingroovy.com">find available domain names</a> for your next startup or side project.
+
+        <br /><br />
+
+        <a href="http://twitter.com/bradjasper">Follow me on Twitter &raquo;</a>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- End Main Content -->
+
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/foundation.min.js"></script>
+  <script src="/static/js/app.js"></script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11057852-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+</body>
+</html>
