@@ -99,7 +99,6 @@ body {
 
 #stagirite_bookmarklet #save table {
   width: 100%;
-  padding: 10px;
   font-size: 12px;
 }
 
@@ -109,6 +108,7 @@ body {
 
 #stagirite_bookmarklet #save table th {
   text-align: right;
+  padding-right: 5px;
 }
 
 #stagirite_bookmarklet #confirmation {
