@@ -6,10 +6,10 @@ function loadCss(style_url) {
     document.getElementsByTagName("head")[0].appendChild(style)
 }
 
-loadCss("http://127.0.0.1:8000/css/iframe.css?cb=" + Math.random());
+loadCss("http://bradjasper.com/stagirite/css/iframe.css?cb=" + Math.random());
 
 var iframe = document.createElement('iframe');
-iframe.src = "http://127.0.0.1:8000/iframe.html";
+iframe.src = "http://bradjasper.com/stagirite/iframe.html";
 iframe.id = "stagirite_iframe";
 document.body.addEventListener("click", function() {
   iframe.className = "hide";

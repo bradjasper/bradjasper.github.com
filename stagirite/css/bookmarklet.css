@@ -81,15 +81,15 @@ body {
 }
 
 #stagirite_bookmarklet .container ul > li > a.folder {
-  background: url("/images/folder.png") 5px 2px no-repeat;
+  background: url("http://bradjasper.com/stagirite/images/folder.png") 5px 2px no-repeat;
 }
 
 #stagirite_bookmarklet .container ul > li > a.group {
-  background: url("/images/group.png") 5px 2px no-repeat;
+  background: url("http://bradjasper.com/stagirite/images/group.png") 5px 2px no-repeat;
 }
 
 #stagirite_bookmarklet .container ul > li > a.globe {
-  background: url("/images/globe.png") 5px 2px no-repeat;
+  background: url("http://bradjasper.com/stagirite/images/globe.png") 5px 2px no-repeat;
 }
 
 #stagirite_bookmarklet #save {
