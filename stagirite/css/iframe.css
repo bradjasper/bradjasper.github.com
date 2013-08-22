@@ -4,7 +4,7 @@
     background: white;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0,0,0,.25);
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     margin-left: auto;
