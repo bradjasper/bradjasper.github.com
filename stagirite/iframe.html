@@ -15,8 +15,9 @@ parent.postMessage({event: "loaded"}, "*");
 <link rel="stylesheet" href="http://bradjasper.com/stagirite/css/bookmarklet.css" />
 
 <div id="stagirite_bookmarklet">
-  <div class="flipper">
-    <div class="front-side face">
+  <div id="card">
+    <div class="front-face face">
+
       <div class="container" id="root">
         <div class="wrapper">
           <a class="settings_wheel" href="#" onclick="show_settings()">
@@ -120,9 +121,17 @@ parent.postMessage({event: "loaded"}, "*");
             <small><a href="http://www.stagirite.com/">View saved link</a></small>
         </div>
       </div>
+
+
+
+
+
+
+
+
     </div>
 
-    <div class="back-side face">
+    <div class="back-face face">
       <div class="container" id="settings">
         <h1>Settings</h1>
 
@@ -147,8 +156,9 @@ parent.postMessage({event: "loaded"}, "*");
         <br />
         <button onclick="hide_settings()">Close Settings</button>
       </div>
-    </div>
 
+
+    </div>
   </div>
 
 </div>
@@ -229,13 +239,11 @@ function create_new_folder() {
 }
 
 function show_settings() {
-  document.querySelector("#stagirite_bookmarklet .front-side").style.display = "none";
-  document.querySelector("#stagirite_bookmarklet .back-side").style.display = "block";
+  document.getElementById('card').classList.toggle("flipped");
 }
 
 function hide_settings() {
-  document.querySelector("#stagirite_bookmarklet .back-side").style.display = "none";
-  document.querySelector("#stagirite_bookmarklet .front-side").style.display = "block";
+  document.getElementById('card').classList.toggle("flipped");
 }
 
 </script>

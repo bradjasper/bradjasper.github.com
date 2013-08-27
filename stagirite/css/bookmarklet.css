@@ -11,13 +11,10 @@ body {
   font-size: 14px;
   overflow-x: hidden;
   width: 275px;
-}
 
-#stagirite_bookmarklet .front-side {
-}
 
-#stagirite_bookmarklet .back-side {
-  display: none;
+  height: 210px;
+  -webkit-perspective: 800px;
 }
 
 #stagirite_bookmarklet .container {
@@ -167,4 +164,50 @@ body {
 
 #stagirite_bookmarklet #settings {
   text-align: center;
+}
+
+#card {
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: -webkit-transform 1s;
+     -moz-transition: -moz-transform 1s;
+       -o-transition: -o-transform 1s;
+          transition: transform 1s;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+#card.flipped {
+  -webkit-transform: rotateY( 180deg );
+     -moz-transform: rotateY( 180deg );
+       -o-transform: rotateY( 180deg );
+          transform: rotateY( 180deg );
+}
+
+#card .face {
+  margin: 0;
+  display: block;
+  width: 270px;
+  height: 210px;
+  position: absolute;
+  background: white;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+#card .front-face {
+}
+
+#card .back-face {
+  -webkit-transform: rotateY( 180deg );
+     -moz-transform: rotateY( 180deg );
+       -o-transform: rotateY( 180deg );
+          transform: rotateY( 180deg );
 }
