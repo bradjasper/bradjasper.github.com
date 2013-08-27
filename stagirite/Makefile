@@ -4,14 +4,17 @@ SCRIPT_DIR=${BASE_DIR}/scripts
 TEMPLATE_DIR=${BASE_DIR}/templates
 JS_DIR=${BASE_DIR}/js
 
-all: compile_templates combine
+all:
+	@echo "Making all"
 
-compile_templates:
-	rm -rf ${TEMPLATE_DIR}/templates.js
-	${SCRIPT_DIR}/compile_js_templates ${TEMPLATE_DIR}/*.html > ${TEMPLATE_DIR}/templates.js
+development:
+	@echo "Switching links to development"
+	sed -i '' 's/bradjasper\.com/localhost:8000/g' js/*.js
+	sed -i '' 's/bradjasper\.com/localhost:8000/g' css/*.css
+	sed -i '' 's/bradjasper\.com/localhost:8000/g' *.html
 
-combine:
-	cat ${TEMPLATE_DIR}/templates.js \
-		${JS_DIR}/bookmarklet.js > ${JS_DIR}/all.js
-	@echo "Successfully combined all JS files"
-
+production:
+	@echo "Switching links to production"
+	sed -i '' 's/localhost:8000/bradjasper\.com/g' js/*.js
+	sed -i '' 's/localhost:8000/bradjasper\.com/g' css/*.css
+	sed -i '' 's/localhost:8000/bradjasper\.com/g' *.html

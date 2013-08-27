@@ -13,6 +13,13 @@ body {
   width: 275px;
 }
 
+#stagirite_bookmarklet .front-side {
+}
+
+#stagirite_bookmarklet .back-side {
+  display: none;
+}
+
 #stagirite_bookmarklet .container {
   position: absolute;
   left: 275px;
@@ -92,6 +99,41 @@ body {
   background: url("http://bradjasper.com/stagirite/images/globe.png") 5px 2px no-repeat;
 }
 
+#stagirite_bookmarklet .container ul > li > a.quick-save {
+  background: url("http://bradjasper.com/stagirite/images/quick-save.png") 5px 2px no-repeat;
+}
+
+#stagirite_bookmarklet .container .settings_wheel {
+  float: right;
+  text-decoration: none;
+  padding: 3px;
+}
+
+#stagirite_bookmarklet .container .settings_wheel img {
+  opacity: .6;
+}
+
+#stagirite_bookmarklet .container .settings_wheel:hover img {
+  opacity: .8;
+}
+
+#stagirite_bookmarklet .container .settings_wheel .triangle {
+  visibility: hidden;
+}
+
+#stagirite_bookmarklet .container .settings_wheel:hover .triangle {
+  visibility: visible;
+}
+
+#stagirite_bookmarklet #start {
+  text-align: center;
+}
+
+#stagirite_bookmarklet #start button {
+  font-size: 120%;
+  padding: 10px 15px;
+}
+
 #stagirite_bookmarklet #save {
   text-align: center;
   font-size: 14px;
@@ -121,4 +163,8 @@ body {
 
 #stagirite_bookmarklet #confirmation .saved {
   display: none;
+}
+
+#stagirite_bookmarklet #settings {
+  text-align: center;
 }

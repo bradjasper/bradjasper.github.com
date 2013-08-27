@@ -1,0 +1,123 @@
+<script>
+var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+var eventer = window[eventMethod];
+var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+
+// Listen to message from child window
+eventer(messageEvent,function(e) {
+//  alert("Got message from parent");
+},false);
+
+parent.postMessage({event: "loaded"}, "*");
+
+</script>
+
+<link rel="stylesheet" href="http://bradjasper.com/stagirite/css/bookmarklet.css" />
+
+<div id="stagirite_bookmarklet">
+  <div class="flipper">
+    <div class="front-side face">
+      <div class="container" id="start">
+        <div class="wrapper">
+          <h1>Please login or signup to continue</h1>
+          <br />
+          <br />
+          <button onclick="close_bookmarklet()">Log In</button>
+          <br />
+          <br />
+          - or -
+          <br />
+          <br />
+          <button onclick="close_bookmarklet()">Signup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function Stacker(initial) {
+  this.stack = [];
+
+  this.hide_left = function(container) {
+    console.log("Hiding Left = " + container.id);
+    container.style.left = "-275px";
+  };
+
+  this.hide_right = function(container) {
+    console.log("Hiding Left = " + container.id);
+    container.style.left = "275px";
+  };
+
+  this.show = function(container) {
+    console.log("Showing = " + container.id);
+    container.style.left = "0px";
+  };
+
+  this.add = function(container) {
+
+    if (this.stack.length > 0) {
+      this.hide_left(this.stack[this.stack.length-1]);
+    }
+
+    this.show(container);
+    this.stack.push(container);
+  };
+
+  this.add_by_id = function(container_id) {
+    var container = document.getElementById(container_id);
+    if (container) {
+      this.add(container);
+    }
+  }
+
+  this.pop = function() {
+    if (this.stack.length > 1) {
+      this.hide_right(this.stack.pop());
+      this.show(this.stack[this.stack.length-1]);
+    }
+  }
+
+  if (initial) {
+    this.add(initial);
+  }
+}
+
+var stacker = new Stacker(document.getElementById("root"));
+
+function show_save() {
+  stacker.add_by_id("save");
+}
+
+function show_confirmation() {
+  stacker.add_by_id("confirmation");
+  setTimeout(function() {
+    document.querySelector("#confirmation .saving").style.display = "none";
+    document.querySelector("#confirmation .saved").style.display = "block";
+    setTimeout(function() {
+      close_bookmarklet();
+    }, 1800);
+  }, 1500);
+}
+
+function close_bookmarklet() {
+  parent.postMessage({event: "close"}, "*");
+}
+
+function create_new_folder() {
+  folder = prompt("Enter a new folder name to create...");
+  show_save();
+}
+
+function show_settings() {
+  document.querySelector("#stagirite_bookmarklet .front-side").style.display = "none";
+  document.querySelector("#stagirite_bookmarklet .back-side").style.display = "block";
+}
+
+function hide_settings() {
+  document.querySelector("#stagirite_bookmarklet .back-side").style.display = "none";
+  document.querySelector("#stagirite_bookmarklet .front-side").style.display = "block";
+}
+
+</script>

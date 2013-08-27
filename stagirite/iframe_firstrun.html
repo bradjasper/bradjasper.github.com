@@ -13,7 +13,7 @@ parent.postMessage({event: "loaded"}, "*");
 </script>
 
 <link rel="stylesheet" href="http://bradjasper.com/stagirite/css/bookmarklet.css" />
-
+<body class="first-run">
 <div id="stagirite_bookmarklet">
   <div class="flipper">
     <div class="front-side face">
@@ -27,13 +27,6 @@ parent.postMessage({event: "loaded"}, "*");
           <ul>
             <li><a href="#" onclick="show_confirmation()" class="quick-save">Quick save (Read It Later)</a></li>
             <li><a href="#" onclick="stacker.add_by_id('personal_space');" class="folder">Your Personal Space</a></li>
-            <li class="divider"><hr></li>
-            <li><a href="#" onclick="stacker.add_by_id('save');" class="group">Shared History Group</a></li>
-            <li><a href="#" onclick="stacker.add_by_id('save');" class="group">Shared Technology Group</a></li>
-            <li><a href="#" onclick="stacker.add_by_id('save');" class="group">Shared Startups Group</a></li>
-            <li class="divider"><hr></li>
-            <li><a href="#" onclick="stacker.add_by_id('save');" class="globe">BradJasper.com Website</a></li>
-            <li><a href="#" onclick="stacker.add_by_id('save');" class="globe">ThinksILike.com Website</a></li>
           </ul>
         </div>
       </div>
@@ -152,6 +145,7 @@ parent.postMessage({event: "loaded"}, "*");
   </div>
 
 </div>
+</body>
 
 
 <script>
