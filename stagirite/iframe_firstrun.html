@@ -115,33 +115,6 @@ parent.postMessage({event: "loaded"}, "*");
       </div>
     </div>
 
-    <div class="back-side face">
-      <div class="container" id="settings">
-        <h1>Settings</h1>
-
-
-        <p>Quick Save to
-        <select>
-        <option>Last Folder</option>
-        <option>---------------</option>
-        <option>Read It Later</option>
-        <option>Technology</option>
-        <option>Startups</option>
-        <option>Business</option>
-        <option>History</option>
-        <option>Arts &amp; Entertainment</option>
-        <option>Research</option>
-        <option>Fun</option>
-        <option>Pop Culture</option>
-        </select>
-        </p>
-        <br />
-        <p>Logged in as <strong>bjasper<?strong> (<a href="#">Logout</a>)</p>
-        <br />
-        <button onclick="hide_settings()">Close Settings</button>
-      </div>
-    </div>
-
   </div>
 
 </div>
@@ -223,13 +196,10 @@ function create_new_folder() {
 }
 
 function show_settings() {
-  document.querySelector("#stagirite_bookmarklet .front-side").style.display = "none";
-  document.querySelector("#stagirite_bookmarklet .back-side").style.display = "block";
+  alert("Settings not available in this version. Try the regular bookmarklet");
 }
 
 function hide_settings() {
-  document.querySelector("#stagirite_bookmarklet .back-side").style.display = "none";
-  document.querySelector("#stagirite_bookmarklet .front-side").style.display = "block";
 }
 
 </script>
