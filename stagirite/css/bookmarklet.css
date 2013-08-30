@@ -1,20 +1,105 @@
 body {
     margin: 0;
     padding: 5px;
-    width: 275px;
-    height: 250px;
     overflow: hidden;
+}
+
+#stagirite_bookmarklet_wrapper {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 275px;
+  height: 210px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+#stagirite_bookmarklet_wrapper.wide {
+    width: 475px;
+    height: 250px;
+}
+
+#stagirite_bookmarklet_wrapper.wide .login_form {
+}
+
+#stagirite_bookmarklet_wrapper.wide #card {
+  display: none;
+}
+
+#stagirite_bookmarklet_wrapper.normal .login_form {
+  display: none;
+}
+
+#stagirite_bookmarklet_wrapper .login_form .or-divider {
+  border-right: 2px dashed rgba(0,0,0,.5);
+  float: left;
+  width: 1px;
+  margin: 15px 5px;
+  height: 210px;
+  display: block;
+}
+
+#stagirite_bookmarklet_wrapper .login_form h2 {
+  font-size: 15px;
+  color: rgba(0,0,0,.7);
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+#stagirite_bookmarklet_wrapper .login_form {
+  padding: 5px 15px;
+}
+
+#stagirite_bookmarklet_wrapper .login_form .email {
+  float: left;
+  width: 45%;
+  margin-right: 5px;
+}
+
+#stagirite_bookmarklet_wrapper .login_form .social {
+  float: right;
+  width: 45%;
+  margin-left: 5px;
+}
+#stagirite_bookmarklet_wrapper .login_form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#stagirite_bookmarklet_wrapper .login_form input {
+  display: block;
+  width: 150px;
+}
+
+#stagirite_bookmarklet_wrapper .login_form .checkbox {
+  font-size: 13px;
+}
+
+#stagirite_bookmarklet_wrapper .login_form input[type=checkbox] {
+  display: inline-block;
+  width: auto;
+  border: 1px solid red;
+}
+
+#stagirite_bookmarklet_wrapper .login_form input[type=submit] {
+  width: auto;
 }
 
 #stagirite_bookmarklet {
   font-family: Helvetica, Verdana;
   font-size: 14px;
   overflow-x: hidden;
-  width: 275px;
-
-
-  height: 210px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
   -webkit-perspective: 800px;
+  border: 1px solid rgba(0,0,0,.2);
+  box-shadow: 1px 1px 5px rgba(0,0,0,.25);
+  border-radius: 5px;
 }
 
 #stagirite_bookmarklet .container {
@@ -28,6 +113,7 @@ body {
   -moz-transition: .75s left ease;
   background: white;
   height: 210px;
+  border-radius: 5px;
 }
 
 #stagirite_bookmarklet .container:first-child {
@@ -45,6 +131,12 @@ body {
   border-bottom: 1px solid rgba(0,0,0,.35);
   background: white;
   color: rgba(0,0,0,.75);
+  border-radius: 5px;
+}
+
+#stagirite_bookmarklet .container h1 .inner {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #stagirite_bookmarklet .container .back {
@@ -62,6 +154,14 @@ body {
   padding: 3px 0;
 }
 
+#stagirite_bookmarklet .text-divider li.divider {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(0,0,0,.75);
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
 #stagirite_bookmarklet .container li.divider hr {
   background: rgba(0,0,0,.2);
   height: 1px;
@@ -70,40 +170,57 @@ body {
   border: 0;
 }
 
+
+#stagirite_bookmarklet .text-divider ul > li > a {
+  margin-left: 6px;
+  margin-right: 10px;
+}
+
 #stagirite_bookmarklet .container ul > li > a {
   color: #666;
-  padding: 3px;
+  padding: 4px 3px;
   padding-left: 27px;
   display: block; 
   background: rgba(0,0,0,.07);
   border-radius: 3px;
-  -webkit-transition: background 0.10s ease;
-}
-
-#stagirite_bookmarklet .container ul > li > a:hover {
-  background: rgba(0,0,0,.10);
+  position: relative;
 }
 
 #stagirite_bookmarklet .container ul > li > a.folder {
-  background: url("http://bradjasper.com/stagirite/images/folder.png") 5px 2px no-repeat;
+  background: url("http://bradjasper.com/stagirite/images/folder.png") 5px 3px no-repeat;
 }
 
 #stagirite_bookmarklet .container ul > li > a.group {
-  background: url("http://bradjasper.com/stagirite/images/group.png") 5px 2px no-repeat;
+  background: url("http://bradjasper.com/stagirite/images/group.png") 5px 3px no-repeat;
 }
 
 #stagirite_bookmarklet .container ul > li > a.globe {
-  background: url("http://bradjasper.com/stagirite/images/globe.png") 5px 2px no-repeat;
+  background: url("http://bradjasper.com/stagirite/images/globe.png") 5px 3px no-repeat;
 }
 
 #stagirite_bookmarklet .container ul > li > a.quick-save {
-  background: url("http://bradjasper.com/stagirite/images/quick-save.png") 5px 2px no-repeat;
+  background: url("http://bradjasper.com/stagirite/images/quick-save.png") 5px 3px no-repeat;
+}
+
+#stagirite_bookmarklet .container ul > li > a:hover {
+  background-color: rgba(0,0,0,.1);
+}
+
+#stagirite_bookmarklet .container ul > li > a > .child-indicator {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  opacity: .45;
+  background: url("http://bradjasper.com/stagirite/images/arrow.png") right no-repeat;
 }
 
 #stagirite_bookmarklet .container .settings_wheel {
   float: right;
   text-decoration: none;
-  padding: 3px;
+  padding: 7px;
 }
 
 #stagirite_bookmarklet .container .settings_wheel img {
@@ -158,8 +275,9 @@ body {
   font-size: 11px;
 }
 
-#stagirite_bookmarklet #confirmation .saved {
-  display: none;
+#stagirite_bookmarklet #confirmation .saved h2 {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #stagirite_bookmarklet #settings {
@@ -191,10 +309,11 @@ body {
 #card .face {
   margin: 0;
   display: block;
-  width: 270px;
+  width: 275px;
   height: 210px;
   position: absolute;
   background: white;
+  border-radius: 5px;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
      -moz-backface-visibility: hidden;

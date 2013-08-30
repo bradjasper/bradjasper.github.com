@@ -1,16 +1,11 @@
 #stagirite_iframe {
     visibility: hidden;
-    background: white;
-    border-radius: 5px;
-    border: 1px solid rgba(0,0,0,.2);
-    box-shadow: 1px 1px 5px rgba(0,0,0,.25);
     position: fixed;
     left: 0;
+    border: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    height: 225px;
-    width: 275px;
+    height: 100%;
+    width: 100%;
     top: -200px;
     z-index: 99999999;
 }
@@ -18,12 +13,12 @@
 #stagirite_iframe.show {
   visibility: visible;
   top: 50px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
 }
 
 #stagirite_iframe.hide {
   top: -500px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
 }
