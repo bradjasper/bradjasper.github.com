@@ -56,8 +56,8 @@ parent.postMessage({event: "loaded"}, "*");
         <div class="container text-divider" id="root">
           <div class="wrapper">
             <a class="settings_wheel" href="#" onclick="show_settings()">
-              <img class="settings" src="http://bradjasper.com/stagirite/images/settings.png" width="10" />
-              <img class="triangle" src="http://bradjasper.com/stagirite/images/triangle-down.png" width="10" />
+              <img class="settings" src="http://bradjasper.com/stagirite/images/settings.png" width="13" />
+              <img class="triangle" src="http://bradjasper.com/stagirite/images/triangle-down.png" width="11" />
             </a>
             <h1>Save web page</h1>
             <ul>
@@ -68,7 +68,7 @@ parent.postMessage({event: "loaded"}, "*");
               <li><a href="#" onclick="stacker.add_by_id('save');" class="group">History<span class="child-indicator"></span></a></li>
               <li><a href="#" onclick="stacker.add_by_id('save');" class="group">Technology<span class="child-indicator"></span></a></li>
               <li><a href="#" onclick="stacker.add_by_id('save');" class="group">Startups<span class="child-indicator"></span></a></li>
-              <li class="divider">Websites</li>
+              <li class="divider">Sites</li>
               <li><a href="#" onclick="stacker.add_by_id('save');" class="globe">BradJasper.com<span class="child-indicator"></span></a></li>
               <li><a href="#" onclick="stacker.add_by_id('save');" class="globe">ThinksILike.com<span class="child-indicator"></span></a></li>
             </ul>
@@ -77,14 +77,12 @@ parent.postMessage({event: "loaded"}, "*");
 
         <div class="container" id="personal_space">
             <a class="settings_wheel" href="#" onclick="show_settings()">
-              <img class="settings" src="http://bradjasper.com/stagirite/images/settings.png" width="10" />
-              <img class="triangle" src="http://bradjasper.com/stagirite/images/triangle-down.png" width="10" />
+              <img class="settings" src="http://bradjasper.com/stagirite/images/settings.png" width="13" />
+              <img class="triangle" src="http://bradjasper.com/stagirite/images/triangle-down.png" width="11" />
             </a>
           <div class="wrapper">
           <h1><a href="#" onclick="stacker.pop();" class="back">&laquo; back</a> <span class="inner">Save web page to Your Personal Space</span></h1>
             <ul>
-            <li><a href="#" onclick="show_save()" class="folder">Save to current folder <span class="child-indicator"></span></a></li>
-              <li class="divider"><hr></li>
               <li><a href="#" onclick="show_save()" class="folder">Read It Later <span class="child-indicator"></span></a></li>
               <li class="divider"><hr></li>
               <li><a href="#" onclick="show_save()" class="folder">Technology <span class="child-indicator"></span></a></li>
@@ -98,6 +96,8 @@ parent.postMessage({event: "loaded"}, "*");
               <li><a href="#" onclick="show_save()" class="folder">Fun <span class="child-indicator"></span></a></li>
               <li><a href="#" onclick="show_save()" class="folder">Pop Culture <span class="child-indicator"></span></a></li>
               <li class="divider"><hr></li>
+            <li><a href="#" onclick="show_save()" class="folder">Save to Your Personal Space<span class="child-indicator"></span></a></li>
+              <li class="divider"><hr></li>
               <li><a href="#" onclick="create_new_folder()">Create New Folder...</a></li>
             </ul>
           </div>
@@ -105,8 +105,8 @@ parent.postMessage({event: "loaded"}, "*");
 
         <div class="container" id="save">
             <a class="settings_wheel" href="#" onclick="show_settings()">
-              <img class="settings" src="http://bradjasper.com/stagirite/images/settings.png" width="10" />
-              <img class="triangle" src="http://bradjasper.com/stagirite/images/triangle-down.png" width="10" />
+              <img class="settings" src="http://bradjasper.com/stagirite/images/settings.png" width="13" />
+              <img class="triangle" src="http://bradjasper.com/stagirite/images/triangle-down.png" width="11" />
             </a>
           <div class="wrapper">
             <h1><a href="#" onclick="stacker.pop();" class="back">&laquo; back</a> Confirm Save</h1>
@@ -126,7 +126,7 @@ parent.postMessage({event: "loaded"}, "*");
                 </tr>
                 <tr>
                   <th>Tags</th>
-                  <td><input /></td>
+                  <td><textarea></textarea></td>
                 </tr>
                 <tr>
                   <th>Comment</th>
