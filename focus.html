@@ -1,108 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Focus</title>
-    <style>
-      body {
-        background: #efefef;
-        color: #222;
-        font-family: Georgia;
-      }
 
-      #wrapper {
-        width: 550px;
-        margin: 0 auto;
-      }
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
 
-      blockquote {
-        margin: 0;
-      }
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
 
-      .quote {
-        margin-top: 100px;
-      }
+  <title>Focus Case Study</title>
 
-      .quote:before, .quote:after { 
-        display: block; 
-        color: #ddd;
-        font-size: 500px;
-      }
+  <meta name="author" content="Brad Jasper">
+  <meta name="description" content="Brad Jasper is a freelance software developer living in Raleigh, North Carolina">
+  
+  
+    <link rel="shortcut icon" href="/static/images/focus-app-icon/icon_16x16.png">
+  
 
-      .quote:before { 
-        content: open-quote; 
-        margin-left: -225px;
-        height: 150px;
-      }
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="/static/css/foundation.css">
+  <link rel="stylesheet" href="/static/css/app.css">
 
-      .quote:after { 
-        content: close-quote; 
-        margin-top: -180px;
-        margin-left: 575px;
+  <script src="/static/js/modernizr.foundation.js"></script>
+</head>
+<body>
 
-      }
+  
 
-      .quote cite {
-        display: block;
-        padding-top: 25px;
-        font-style: italic;
-        color: #999;
-      }
+  <div class="row page">
 
-      .about {
-        text-align: center;
-        font-size: 12px;
-        color: #999;
-        font-style: italic;
-        margin-top: -200px;
-      }
+  <!-- Main Case Study Content -->
+  <div class="twelve columns blog_entry" role="content">
 
-      blockquote {
-        line-height: 40px;
-        font-size: 26px;
-        color: #666;
-      }
+    <article class="casestudy">
 
-    </style>
-    <script>
-      var quotes = [
-        "Amateurs sit and wait for inspiration, the rest of us just get up and go to work|Stephen King",
-        "All men dream, but not equally. Those who dream by night in the dusty recesses of their minds, wake in the day to find that it was vanity: but the dreamers of the day are dangerous men, for they may act on their dreams with open eyes, to make them possible.|T. E. Lawrence",
-        "Action is the foundational key to all success|Pablo Picasso",
-        "There is no substitute for hard work|Thomas Edison",
-        "Focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it.|John Carmack",
-        "Opportunities are usually disguised as hard work, so most people don't recognize them.|Ann Landers",
-        "It's hard to beat a person who never gives up|Babe Ruth",
-      ];
-    </script>
-  </head>
+      
+        <div class="row">
+          <div class="mobile-four eight columns centered header">
+            <img class="icon" src="/static/images/focus-app-icon/icon_256x256.png" />
+            <h1>Focus</h1>
+            <div class="clear"></div>
+          </div>
+        </div>
+      
 
-  <body>
+      <div class="row">
 
-    <div id="wrapper">
-      <div class="quote">
+        <div class="eight mobile-four columns centered">
+          <p><a href="http://www.heyfocus.com">Focus</a> is a Mac productivity app that blocks distracting websites. It's the first Mac app I ever released, and decided to write up the experience here. If you're interested, I also <a href="https://github.com/bradjasper/Focus">open sourced</a> it.</p>
 
-        <blockquote id="quote"></blockquote>
-        <cite id="cite"></cite>
-        <script>
-          var random_quote = quotes[Math.floor(Math.random() * quotes.length)];
-          var quote_parts = random_quote.split("|");
-          var quote = quote_parts[0];
-          var author = quote_parts[1];
+<br>
 
-          document.getElementById("quote").innerHTML = quote;
 
-          if (author) {
-            document.getElementById("cite").innerHTML = "&mdash;" + author;
-            document.getElementById("cite").visible = true;
-          } else {
-            document.getElementById("cite").visible = false;
-          }
-        </script>
+<br>
 
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<h3>The Idea</h3>
+
+<p>Focus is a small Mac app that blocks distracting websites and services.</p>
+
+<p>I built it because when I'm working, I don't want to be distracted. But computers are getting better and better at distracting and interrupting us.</p>
+
+<p>Focus is an easy way to say "I'm working" and to shut everything out.</p>
+
+<div class="seperator"></div>
+
+
+<h3>Evaluating the Market</h3>
+
+<p>There were already a few existing products that block distracting websites (the least of which is /etc/hosts), but none them hit all of my goals:</p>
+
+<ul>
+<li>Simple, intuitive, stays out of your way</li>
+<li>1-click toggle from the menubar</li>
+<li>Easily undo (not "forcing" productivity)</li>
+<li>Works without browser restart (some have internal DNS caches)</li>
+<li>Works on instant messenger services</li>
+<li>Only requires admin password one time</li>
+<li>Ability to show custom message on blocked website</li>
+</ul>
+
+
+<p>This was enough for me to decide to build Focus.</p>
+
+<p>Usually I'd spend more validating the idea with customers, but because Focus was a small app and something I personally wanted, I wasn't as worried about this.</p>
+
+<div class="seperator"></div>
+
+
+<h3>Building the Product</h3>
+
+<p>Focus is a menubar app, so it doesn't have any windows (besides preferences).</p>
+
+<p><figure>
+<img src="/static/images/content/menubar-icon-states.png" alt="Focus menubar icon states" />
+<figcaption>Focus modes (top to bottom): off, on, on (grayscale)</figcaption>
+</figure></p>
+
+<p>This means I didn't have to write lots of UI or view code—rather most of the work on Focus was in the background.</p>
+
+<p><figure class="shadow">
+<img src="/static/images/content/preferences-window.png" alt="Focus preferences window" />
+<figcaption>Preferences window</figcaption>
+</figure></p>
+
+<p><figure class="shadow">
+<img src="/static/images/content/blocked-sites-window.png" alt="Focus blocked sites window" />
+<figcaption>Blocked websites window</figcaption>
+</figure></p>
+
+<p>Here are some of the main parts:</p>
+
+<br>
+
+
+<h4>Privileged Helper Tool</h4>
+
+<p>Under-the-hood, Focus requires an administrator password for many of the tasks it performs, but constantly entering your password is a bad experience.</p>
+
+<p>There are a few ways to solve this, but the best I found was using a privileged helper tool, which gets installed the first time the app is run. The helper tool keeps the privileges and can receive messages from Focus to do the tasks it needs without asking the user over and over for their password.</p>
+
+<p><figure class="shadow">
+<img src="/static/images/content/password-prompt.png" alt="Privileged Helper Tool installation" />
+<figcaption>Example of helper tool being installed so password is only prompted once</figcaption>
+</figure></p>
+
+<p>Some other apps do ask for your password over and over and actually consider it a feature.</p>
+
+<p>Focus doesn't take this approach. It's goal is to block interruptions and gently remind you when you get distracted—but not to force you.</p>
+
+<p>If you want to get back to your blocked websites, you should be able to.</p>
+
+<br>
+
+
+<h4>Blocking and Intercepting Websites</h4>
+
+<p>There are many ways to block and intercept websites, here's a few Focus explored:</p>
+
+<br>
+
+
+<p><strong>/etc/hosts</strong>:
+The easiest way to block distracting websites is using /etc/hosts, and this is what Focus originally used.</p>
+
+<p>Unfortunately, some browsers have an internal cache and require a restart. This was painful enough to search for alternatives.</p>
+
+<br>
+
+
+<p><strong>IPFW/PF</strong>:
+Mac OS X has built-in firewalls that can block IP's really well. They can even slow down traffic rather than block it directly, which is a great feature.</p>
+
+<p>But managing the HOST -> IP conversion is a pain. Some hosts resolve to many IP addresses and resolving them can be slow.</p>
+
+<p>Also, intercepting webpages and displaying custom content was harder than with other methods.</p>
+
+<br>
+
+
+<p><strong>DNS</strong>:
+Setting up a custom DNS server that blocks host lookups was an option, but I thought the liability was too large.</p>
+
+<p>Some people don't want to change their DNS servers and a lot of people already use custom servers.</p>
+
+<p>Plus, Focus would be taking responsibility for all network traffic which isn't desirable.</p>
+
+<br>
+
+
+<p><strong>Automatic Proxy Configuration</strong>:
+The option Focus ended up using was called Automatic Proxy Configuration. Mac OS X has this built-in and is a way to configure proxies for certain sites dynamically—perfect!</p>
+
+<p>This allowed me to intercept websites and display a custom message, without taking control of the entire network connection.</p>
+
+<p>It relies on a PAC file, which is a file that contains a Javascript function with instructions on routing.</p>
+
+<p>If you've never seen one before, it's actually kind of cool.</p>
+
+<pre><code>function FindProxyForURL(url, host) {
+    if (dnsDomainIs(host,'facebook.com')) return 'PROXY localhost:8401';
+    if (dnsDomainIs(host,'twitter.com')) return 'PROXY localhost:8401';
+    // ...
+    return 'DIRECT';
+}
+</code></pre>
+
+<br>
+
+
+<br>
+
+
+<p>One small issue was it wouldn't work for anyone who already used a PAC file—but so far this has been a tiny minority (eventually this could be fixed by merging them).</p>
+
+<p>Otherwise, Automatic Proxy Configuration satisfied all of Focus' required goals really well.</p>
+
+<br>
+
+
+<br>
+
+
+<h4>Serving Local PAC Files</h4>
+
+<br>
+
+
+<p>Most PAC files are served with HTTP, but that would have meant running an extra HTTP server for Focus, which was just one more thing to manage.</p>
+
+<p>It turns out you can specify a local PAC file, but unfortunately Safari has sandbox restrictions on where it can read local files.</p>
+
+<p>The workaround for this is creating the PAC file where Safari does have permission to read, which is /Library/Managed Preferences/</p>
+
+<p>This is all managed with the HelperTool so that Focus only asks for a password once.</p>
+
+<br>
+
+
+<br>
+
+
+<h4>Serving a custom message instead of a website</h4>
+
+<br>
+
+
+<p>One unique feature of Focus is intercepting the blocked website and displaying a custom message (a motivational quote by default).</p>
+
+<p><figure>
+<img src="/static/images/content/reddit-blocked.png" alt="Focus block message" />
+<figcaption>Example of Focus blocking a website</figcaption>
+</figure></p>
+
+<p>The PAC file described above worked perfectly for this, all that was needed was a local proxy server.</p>
+
+<p>I ended up using a custom Python script which serves a custom page for HTTP requests and just blackholed HTTPS requests.</p>
+
+<p>There is a way to intercept HTTPS requests but it was very insecure, so I decided against it. It would have significantly increased Focus' risk exposure.</p>
+
+<p>One unique problem with Safari is if the proxy server fails, the request will go through, breaking Focus. So extra care is taken to make sure the proxy server daemon is always live and correctly running.</p>
+
+<p>One other trick I learned is you can jam HTTPS requests with basic HTTP/1.0 responses so you don't have to accept the handshake then drop the connection—it just jams it from the beginning ;).</p>
+
+<div class="seperator"></div>
+
+
+<h3>No AppStore</h3>
+
+<br>
+
+
+<p>One bad thing I learned early on into the development of Focus was that it couldn't be in the AppStore.</p>
+
+<p>It requires administrator privileges because it modifies system-level network settings. Unfortunately this means Focus can't stay in a sandbox, so it can't be in the AppStore.</p>
+
+<p>I decided to build it anyway, but expect this will have a pretty significant negative effect on sales.</p>
+
+<div class="seperator"></div>
+
+
+<h3>Building website</h3>
+
+<p>After the app was built, I started building the website.</p>
+
+<p>The goal was to make it simple and clean so that it clearly communicated Focus' value.</p>
+
+<p>Since the main thing I was building was the app, not the website, I used theme from http://www.blacktie.co/ as a starting point.</p>
+
+<p>It got me 80% of where I needed and then just customized</p>
+
+<p>I think it's a really good idea to use templates for websites like this. I don't expect to be making tons of changes to this, and the website is really a by-product—so</p>
+
+<p>I found the domain name http://heyfocus.com using another website of mine, DomainGroovy.</p>
+
+<p>I do a lot of custom web development (both front end and backend), but I don't think an app website is the place to get super fancy.</p>
+
+<br>
+
+
+<br>
+
+
+<h3>Conclusion</h3>
+
+<p>Focus was a fun app to build because it not only solved a personal problem, but I got to experiment with another side of Cocoa and Objective-C that isn't iOS related. I also learned a lot more about Mac OS X system and it's internal systems and tools.</p>
+
+<p>Overall the project came together really well, and while there are a few lingering features I'd like to add&mdash;Focus is just about ready for v1.0.</p>
+
+<p><a href="http://www.heyfocus.com">Learn more about Focus</a> or <a href="https://github.com/bradjasper/Focus">view the source on GitHub</a>.</p>
+
+        </div>
       </div>
 
-      <p class="about">This website has been blocked by <strong>Focus</strong> because it's distracting&mdash;get back to work!</p>
-    </div>
+    </article>
 
-  </body>
+    
+  </div>
+
+
+  <!-- End Main Content -->
+
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/foundation.min.js"></script>
+  <script src="/static/js/app.js"></script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11057852-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+</body>
 </html>
