@@ -1,24 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<!DOCTYPE html>
 
-  <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
-  <link href="http://bradjasper.com/atom.xml" rel="self"/>
-  <link href="http://bradjasper.com/"/>
-  <updated>2014-02-09T23:48:09-05:00</updated>
-  <id>http://bradjasper.com/</id>
-  <author>
-    <name><![CDATA[Brad Jasper]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Case Study: Focus</title>
+
+  <meta name="author" content="Brad Jasper">
+  <meta name="description" content="Brad Jasper is a freelance software developer living in Raleigh, North Carolina">
+  
+  
+    <link rel="shortcut icon" href="/static/images/focus-app-icon/icon_16x16.png">
+  
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="/static/css/foundation.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+
+  <script src="/static/js/modernizr.foundation.js"></script>
+</head>
+<body>
 
   
-  <entry>
-    <title type="html"><![CDATA[Case Study: Focus]]></title>
-    <link href="http://bradjasper.com/blog/case-study-focus/"/>
-    <updated>2014-02-08T14:48:00-05:00</updated>
-    <id>http://bradjasper.com/blog/case-study-focus</id>
-    <content type="html"><![CDATA[<p><a href="http://www.heyfocus.com">Focus</a> is a Mac productivity app that blocks distracting websites. This is a write-up of some of the decisions that went into building the product. If you're interested you can <a href="http://www.heyfocus.com">download Focus</a> or <a href="https://github.com/bradjasper/Focus">view the source code</a> on GitHub.</p>
+
+  <div class="row page">
+
+  <!-- Main Case Study Content -->
+  <div class="twelve columns blog_entry" role="content">
+
+    <article class="casestudy">
+
+      
+        <div class="row">
+          <div class="mobile-four eight columns centered header">
+            <img class="icon" src="/static/images/focus-app-icon/icon_256x256.png" />
+            <h1>Focus</h1>
+            <div class="clear"></div>
+          </div>
+        </div>
+      
+
+      <div class="row">
+
+        <div class="eight mobile-four columns centered">
+          <p><a href="http://www.heyfocus.com">Focus</a> is a Mac productivity app that blocks distracting websites. This is a write-up of some of the decisions that went into building the product. If you're interested you can <a href="http://www.heyfocus.com">download Focus</a> or <a href="https://github.com/bradjasper/Focus">view the source code</a> on GitHub.</p>
 
 <br>
 
@@ -245,31 +282,39 @@ The option Focus ended up using was called Automatic Proxy Configuration. Mac OS
 <p>If you're interested you can <a href="http://www.heyfocus.com">download Focus</a> or <a href="https://github.com/bradjasper/Focus">view the source code on GitHub</a>.</p>
 
 <p>Are you interested in contacting me? <a href="mailto:contact@bradjasper.com">Email me</a> or <a href="https://twitter.com/bradjasper">reach out to @bradjasper</a> on Twitter.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Follow your favorite people on Hacker News]]></title>
-    <link href="http://bradjasper.com/blog/follow-a-hacker-news-users-comments-with-rss/"/>
-    <updated>2013-05-17T13:09:00-04:00</updated>
-    <id>http://bradjasper.com/blog/follow-a-hacker-news-users-comments-with-rss</id>
-    <content type="html"><![CDATA[<p>On Hacker News I have always wanted a way to stay up-to-date with people who make really insightful comments.</p>
 
-<p>There's a lot of great stuff out there&mdash;but it's hard to keep up with it all. This is actually a perfect use-case for RSS: high-quality content that's not updated very frequently.</p>
+        </div>
+      </div>
 
-<p>Unfortunately, Hacker News doesn't support RSS for comments out of the box.</p>
+    </article>
 
-<p>So, with some help from the official <a href="https://www.hnsearch.com/api">Hacker News Search API</a> and <a href="http://pipes.yahoo.com/pipes/">Yahoo! Pipes</a>, I strung together an RSS feed that pulls in the latest comments from any user.</p>
-
-<blockquote>
-http://pipes.yahoo.com/pipes/pipe.run?_id=9c88dd117c9c12408e5f37e5a610ad4a&_render=rss&username=<strong>USERNAME</strong>
-</blockquote>
+    
+  </div>
 
 
-<p>Replace <strong>USERNAME</strong> in the URL above with any valid Hacker News username, and you will receive an RSS feed of their 50 most recent comments.</p>
+  <!-- End Main Content -->
 
-<p><em> Want these in your inbox instead? Try this <a href="https://ifttt.com/recipes/4447">IFTTT recipe</a>. Want all comment feeds merged into one? Try this <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=35b9f23463805cb43e8f674256319b58">Yahoo! Pipes recipe</a>.</p>
-]]></content>
-  </entry>
-  
-</feed>
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/foundation.min.js"></script>
+  <script src="/static/js/app.js"></script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11057852-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+</body>
+</html>

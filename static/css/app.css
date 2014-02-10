@@ -1,3 +1,11 @@
+.row {
+  width: 100%;
+}
+
+.fixed_row {
+  width: 940px;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Verdana;
   background-color: #f2f2f0;
@@ -39,6 +47,7 @@ figure {
 .blog_about hr {
   margin-top: 15px;
 }
+
 .blog_archive ul {
   list-style: none;
 }
@@ -59,18 +68,39 @@ figure {
   font-size: 13px;
   padding-top: 4px;
 }
+.home {
+}
+
+.home hr {
+  padding: 20px 0;
+}
+
+.navigation {
+  padding-top: 100px;
+}
+
+#home_header .nav {
+  padding-top: 15px;
+  max-width: 400px;
+}
+
 .home .nav {
   list-style: none;
-  margin: 0;
+  margin: 20px auto;
+  display: block;
 }
+
 .home .nav li {
+  width: 25%;
+  display: block;
   float: left;
+  text-align: center;
 }
 .home .nav a {
-  margin-right: 20px;
 }
 .page {
-  padding-bottom: 100px;
+  padding-bottom: 20px;
+  max-width: 1300px;
 }
 .page article {
   padding-top: 50px;
@@ -92,6 +122,12 @@ figure {
     float: left;
     margin-left: 15px;
     line-height: 29px;
+}
+
+#home_header {
+  text-align: center;
+  margin-bottom: 75px;
+  margin-top: 25px;
 }
 
 code {
@@ -119,6 +155,65 @@ ul li {
   margin: 80px 0;
 }
 
+#portfolio {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.subtitle {
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 300;
+  color: rgba(0,0,0,.7);
+}
+
+#portfolio .product {
+  height: 500px;
+}
+
+#portfolio .img_wrap {
+  height: 200px;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+/* vertical-alignment hacks suck */
+#focus.product .img_wrap { padding-top: 28px; }
+#pppiano.product .img_wrap { padding-top: 10px; }
+#subtlepatterns.product .img_wrap { padding-top: 2px; }
+#domaingroovy.product .img_wrap { padding-top: 26px; }
+#blogcatalog.product .img_wrap { padding-top: 86px; }
+
+.product .img_wrap a.background {
+  display: block;
+  padding: 50px 20px;
+  margin: 0 auto;
+  max-width: 300px;
+  border: 1px solid rgba(0,0,0,.1);
+  background-color: #fff;
+}
+
+#domaingroovy.product .img_wrap a {
+  background: url('http://domaingroovy.com/media/images/background.png') repeat;
+}
+
+
+#portfolio p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+#recent_blog {
+}
+
+#footer {
+  margin-top: 130px;
+}
+
+
 @media only screen and (max-width: 1023px) {
   .page {
     padding-bottom: 50px;
@@ -131,6 +226,24 @@ ul li {
   figure.shadow figcaption {
       margin-top: -40px;
   }
+
+  #home_header {
+    margin-bottom: 100px;
+  }
+
+  .four, .row .four {
+    width: 49%;
+  }
+
+  #portfolio .product {
+    height: 400px;
+  }
+
+  #portfolio p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -145,4 +258,22 @@ ul li {
       margin-top: -35px;
   }
 
+  #home_header {
+    margin-top: 50px;
+    margin-bottom: 75px;
+  }
+
+  #portfolio .product {
+    height: 400px;
+  }
+
+  #portfolio p {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #focus.product .img_wrap { padding-top: 42px; }
+  #subtlepatterns.product .img_wrap { padding-top: 4px; }
+  #domaingroovy.product .img_wrap { padding-top: 40px; }
+  #blogcatalog.product .img_wrap { padding-top: 140px; }
 }
