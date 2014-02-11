@@ -4,7 +4,7 @@
   <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
   <link href="http://bradjasper.com/atom.xml" rel="self"/>
   <link href="http://bradjasper.com/"/>
-  <updated>2014-02-10T01:05:34-05:00</updated>
+  <updated>2014-02-10T23:08:36-05:00</updated>
   <id>http://bradjasper.com/</id>
   <author>
     <name><![CDATA[Brad Jasper]]></name>
@@ -245,6 +245,11 @@ The option Focus ended up using was called Automatic Proxy Configuration. Mac OS
 <p>If you're interested you can <a href="http://www.heyfocus.com">download Focus</a> or <a href="https://github.com/bradjasper/Focus">view the source code on GitHub</a>.</p>
 
 <p>Are you interested in contacting me? <a href="mailto:contact@bradjasper.com">Email me</a> or <a href="https://twitter.com/bradjasper">reach out to @bradjasper</a> on Twitter.</p>
+
+<hr>
+
+
+<p>I'm working on my next app which is an elegant way to track time. <a href="/timetracker/">Get notified when I launch</a>.</p>
 ]]></content>
   </entry>
   
