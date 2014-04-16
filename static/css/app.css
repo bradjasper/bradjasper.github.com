@@ -81,7 +81,8 @@ figure {
 
 #home_header .nav {
   padding-top: 15px;
-  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .home .nav {
@@ -91,12 +92,13 @@ figure {
 }
 
 .home .nav li {
-  width: 25%;
-  display: block;
-  float: left;
+  display: inline-block;
   text-align: center;
 }
-.home .nav a {
+
+.home .nav li a {
+  display: inline-block;
+  padding: 0 25px;
 }
 .page {
   padding-bottom: 20px;
@@ -126,7 +128,7 @@ figure {
 
 #home_header {
   text-align: center;
-  margin-bottom: 75px;
+  margin-bottom: 125px;
   margin-top: 25px;
 }
 
@@ -213,6 +215,16 @@ ul li {
   margin-top: 130px;
 }
 
+#newsletter {
+  margin-top: 130px;
+}
+
+#home_header .pic {
+    width: 100px;
+    border-radius: 100%;
+}
+
+
 
 @media only screen and (max-width: 1023px) {
   .page {
@@ -276,4 +288,12 @@ ul li {
   #subtlepatterns.product .img_wrap { padding-top: 4px; }
   #domaingroovy.product .img_wrap { padding-top: 40px; }
   #blogcatalog.product .img_wrap { padding-top: 140px; }
+
+  .home .nav li {
+    width: 100%;
+    padding: 5px 0;
+    display: block;
+    float: left;
+    text-align: center;
+  }
 }
