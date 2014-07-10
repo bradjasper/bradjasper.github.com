@@ -4,7 +4,7 @@
   <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
   <link href="http://bradjasper.com/atom.xml" rel="self"/>
   <link href="http://bradjasper.com/"/>
-  <updated>2014-04-22T22:28:10-04:00</updated>
+  <updated>2014-07-10T15:04:48-04:00</updated>
   <id>http://bradjasper.com/</id>
   <author>
     <name><![CDATA[Brad Jasper]]></name>
@@ -12,6 +12,176 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Rise of Interactive Animation in UI Design]]></title>
+    <link href="http://bradjasper.com/blog/the-rise-of-interactive-animation-in-ui-design/"/>
+    <updated>2014-05-18T16:36:00-04:00</updated>
+    <id>http://bradjasper.com/blog/the-rise-of-interactive-animation-in-ui-design</id>
+    <content type="html"><![CDATA[<p><em>Touch-based computing has revolutionized the way we interact with computers; interactive animation has been and will continue to be a huge part of that.</em></p>
+
+<h3>The Basic Principles of Animation</h3>
+
+<p>In the 1930's the ‘old men’ of Walt Disney Studios developed the 12 basic principles of animation.</p>
+
+<p>[ WATCH THIS VIDEO IF YOU HAVEN'T SEEN IT ]</p>
+
+<p>[ examples ]</p>
+
+<p>These tricks brought static characters to life! They made animations fun and engaging made the story that was being told more rich.</p>
+
+<p>Think of the original Pixar lamp introduction. Why was it compelling? Why did it have “charm” (one of their 12 basic principles).</p>
+
+<p>[ show animation ]</p>
+
+<p>User interface design is going through a similar transition right now—turning previous static and "boring" interfaces into "live" interfaces that "feel" good.</p>
+
+<p>For decades, user interfaces have been relatively static and separated by a level of indirection (mouse or keyboard). Of course you could scroll webpages and windows previously, but the experience wasn’t the same. MSPaint was fun, but Paper is a much more engaging experience (many people have anecdotes on how natural it is for a small child to use an iPad, older generations as well).</p>
+
+<p>It turns out removing that level of indirection (the mouse) is huge. Now you’re not interacting with a computer, you’re interacting with <em>your content</em>.</p>
+
+<p>When Steve Jobs demoed the first UIScrollView—people gasped and applauded. [citation needed]</p>
+
+<p>Interacting with your content was just a little more magical.</p>
+
+<p>Suddenly things like gestures became very important, and animations fell out as a natural way to provide smooth transitions between states.</p>
+
+<p>For example, when you flicked a UIScrollView it would scroll faster or slower depending on how hard you flicked.</p>
+
+<p>The magic here is they’ve connected the velocity of the gesture to the velocity of the animation—so it’s a fluid transition from one to the other. Everything feels perfect. The object decays over time and comes to a nice rest just as it would if you threw a ball outside.</p>
+
+<p>Another example is pinching an image—you just do what you would naturally think to do and it works. It feels like your hands are actually manipulating the image. When the magic is working it’s because they are.</p>
+
+<p>So what’s the problem?</p>
+
+<p>As important as these types of gestural interfaces are, they have still been kind of hard to build well. Even though the UIScrollView example has been around for a while—re-creating interfaces that feel “alive” is something that’s usually sprinkled in for certain important interactions.</p>
+
+<p>Consider the image viewer on iOS 7. When you minimize a picture, there's a delay between when you can pick one back up. So sometimes taps get missed.</p>
+
+<p>Why is such a tiny detail important? A lot of animations actually take longer to complete than what it visually looks like. So on an ease-in-out transition, as the transition gets closer to the edge it gets slower to give it the effect of slowing down. If a user mis-times a touch even by a millisecond, the touch is dismissed.</p>
+
+<p>This ever so slightly breaks the immersion.</p>
+
+<hr />
+
+<p>One big difference between animation for cartoons and animation for user interfaces, is the user interface is being controlled by the user. So the user interface always has to be able to react. The user controlling and the interface animating have to be 1:1 otherwise the immersion is broken.</p>
+
+<p>This has been a big part of what's missing from modern day app development.</p>
+
+<p>Animations have been possible, but they're either fire &amp; forget or pretty difficult to build.</p>
+
+<p>One area of computing that's encountered this problem a lot is gaming, of course. Games want to follow all the animation principles while also making the game intuitive from a interaction perspective. If you can't move your character when you swing the sword, it's a bad experience because you can't react when the drag spits his fireball.</p>
+
+<p>The user interface should always be available to manipulate, and the animations should always be a continuous extension of the control you're putting on them.</p>
+
+<hr />
+
+<p>Even the main UI animation in Path, which was widely lauded [citation needed], has a few small issues.</p>
+
+<p>When you press the + button and then quickly press it again to cancel, it ignores your tap. When the menu is activated you can’t interact with the scroll content. When you swipe, the menu closes, but doesn’t scroll the content. </p>
+
+<p>^ Maybe there’s good reasons for this such as they don’t want users pressing scroll items when the menu is open. But they could still initiate the scroll as the menu is closing, and by connecting it with the fingers velocity, everything would feel fine.</p>
+
+<hr />
+
+<p>Most of these animations have been fire &amp; forget [citation needed]. Which means the user can’t interrupt them.</p>
+
+<p>Which means most of the app feels great, but those part break the experience. As if the Walt Disney animators couldn’t afford to make their entire movie adhere to the 12 basic principles of animation so they just left certain characters “dead” rather than making smaller &amp; less complex movies [citation needed—did they do this?]</p>
+
+<p>So if the goal is to create an amazing user experience, immersion is a big part of that.</p>
+
+<p>And when a user can’t stop an animation or it glitches or bounces in a way that doesn’t feel natural—it’s a tiny tiny detail, but breaks the immersion in the same way that an actor delivering a really cheesy line would pull you out of an otherwise great movie.</p>
+
+<p>Most of the time it’s better to just remove the animation than do it poorly.</p>
+
+<p>So what’s available to developers?</p>
+
+<p>The good news is, lots.</p>
+
+<p>Before iOS 7 there were lots of ways to do simple animations (UIView or Core Animation), but these “gestural-based animations” still suffered from problems (like what).</p>
+
+<p>In iOS 7 Apple introduced UIKit dynamics which provides a whole new layer of tools to use just for this purpose—to create interfaces that feel real and a user can interact with.</p>
+
+<p>As wonderful as UIKit dynamics is, it can still be tricky. It requires a shift in thinking away from the very simple Core Animation model. While it’s very powerful it can be difficult (for x, y &amp; z).</p>
+
+<p>[ SHOW EXAMPLE OF UIKIT DYANMICS ]</p>
+
+<p>Fortunately for UI developers &amp; designers everywhere, Facebook recently released POP, which is the animation engine they acquired from Push Pop Press (famous for their Al Gore book) and polished for their new app Paper (link).</p>
+
+<p>What are POP’s main selling points?</p>
+
+<ul>
+<li>Same simple Core Animation API</li>
+<li>New bounciness &amp; decay animation types that helps UI feel “alive” (also has custom)</li>
+<li>Easily update animation while it’s running</li>
+<li>Easily connect gesture velocity to provide fluid interactive animations</li>
+<li>Easily combine multiple complex animations &amp; gestures into one (Paper image manipulation vs Apple)</li>
+</ul>
+
+
+<p>Key word? Easy. It’s really easy to do simple stuff that looks &amp; feel’s good &amp; it’s also pretty easy to do complex stuff that either wasn’t possible before or took tons of custom coding.</p>
+
+<p>[ EXAMPLES OF PAPER ]</p>
+
+<p>[ SHOW A LOT OF THE COMMON PROPERTIES YOU CAN ANIMATE. WITH GIFS ]</p>
+
+<p>[ RE-CREATE UI SCROLL VIEW ]</p>
+
+<p>[ EXAMPLES OF COOL STUFF OTHER PEOPLE ARE DOING / CODEPLEASE &amp; GEOMETRY ]</p>
+
+<p>There are even new projects popping up (sorry) like MCAnimate which make simple animations literally 1 line of code.</p>
+
+<p>It’s kind of incredible to be honest and I’ve been really excited about this since they launched.</p>
+
+<p>If you haven’t already, watch this video Facebook did on POP:</p>
+
+<p>[ INSERT VIDEO LINK ]</p>
+
+<p>There’s some really fascinating stuff in there (like what. you took notes. pull some of it out)</p>
+
+<p>[ WHAT ARE SOME MORE COMPLEX THINGS YOU CAN DO ]</p>
+
+<ul>
+<li><p>Animate any property (sound)</p></li>
+<li><p>UIView animations</p></li>
+<li>Core Animation</li>
+<li>UIKit dynamics</li>
+<li>Facebook POP</li>
+</ul>
+
+
+<h1>Examples</h1>
+
+<ul>
+<li>POP geometry
+ — Follows 1-4 basic principles
+ — When you pull from a corner it stretches that corner, when pull from center it doesn’t stretch so much</li>
+</ul>
+
+
+<p>There are a lot of amazing new possibilities and just like good animation can’t save a bad story, using gesture-based animations poorly or just because you can’t won’t result in a better user experience. But when used properly to ehance the experience and when done with proper care to make sure edge cases that “break the immersion” are handled well—the results can be pretty breathtaking.</p>
+
+<ul>
+<li>Over the next 5/10/15/20 years touch based computing is going to migrate more and more towards these gestural interfaces. Making them immersive in-part means making some of the transitions animated &amp; "feel" like the real world.</li>
+</ul>
+
+
+<p>You can have a huge advantage if you start building your apps like this today given the tools at your disposal.</p>
+
+<h1>Takeaways</h1>
+
+<p>Now's an amazing time to be a UI developer or designer. Software is getting put more and more places and we get to design the interfaces for them.</p>
+
+<p>Whether it's a watch, jawbone, oculus right, or iPhone application</p>
+
+<ul>
+<li><p>If you're a developer start thinking up new ways to build your old interface</p></li>
+<li><p>if you're a designer you can get your hands dirty with Oragami. but oh, btw these animations really aren't hard to build in code! Might be worth downloading one of the existing playground apps and start tweaking!</p></li>
+<li><p>This post is mostly about Apple and talks about UI as if other platforms don't exist (Android). This is mostly just because this is where my experience is (check out rebound)</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Case Study: Focus]]></title>

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "    Hello Cruel World    " |\
+convert -background  none  -undercolor lightblue  -fill blue \
+        -pointsize 18   text:-  -trim +repage  \
+        -bordercolor lightblue  -border 3 \
+        -background lightblue  -flatten    text_box_trimmed.gif
