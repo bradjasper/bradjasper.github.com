@@ -4,7 +4,7 @@
   <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
   <link href="http://bradjasper.com/atom.xml" rel="self"/>
   <link href="http://bradjasper.com/"/>
-  <updated>2014-08-18T10:20:30-04:00</updated>
+  <updated>2014-08-18T10:35:42-04:00</updated>
   <id>http://bradjasper.com/</id>
   <author>
     <name><![CDATA[Brad Jasper]]></name>
@@ -34,13 +34,13 @@
 
 <p>In this case, I think the radial menu's are a good choice (but still need some usability work). Why?</p>
 
-<p>In the new iMessage, recording an audio or video file accidentally could be catastrophic (accidentally sending your boss a sensitive discussion you're having about work).</p>
+<p>In the new iMessage, recording an audio or video file accidentally could be catastrophic (like sending your boss a discussion he wasn't supposed to hear).</p>
 
 <p>But at the same time, when you do plan on recording a message (like in the car at a stop light), it needs to be fast and efficient.</p>
 
-<p>The radial menu (with its long press + slide gesture) makes an accidental action unlikely and a intentional action easy.</p>
+<p><strong>The radial menu (with its long press + slide gesture) makes accidental actions unlikely and intentional actions easy.</strong></p>
 
-<p>And I think that's the point of iMessage's radial menu: it's hard to do accidentally but fast &amp; easy when you want to.</p>
+<p>And I think that's the point of iMessage's radial menu. It's a risky action that needs to be done easily. Not usually a good combo. Radial menu's (and other controls) can help.</p>
 
 <br />
 
@@ -52,7 +52,7 @@
 <ul>
 <li><p>They're new, and will need to be learned by a large part of the population. Apple introducing this as a standard control will help.</p></li>
 <li><p>The usability can be really poor. In iMessage the tap area is too small. This is especially bad for long-presses because the miss doesn't register for 1 or 2 seconds—much longer than a regular button.</p></li>
-<li><p>The menus's can have too much state. iMessage changes what menu depending on your current state (newly opened or recording).  If this happens too much, a user can get confused. Radial menu's should be simple and have very little state change to be easily understood.</p></li>
+<li><p>The menus's can have too much state. iMessage changes the menu depending on your current state (newly opened or recording).  If this happens too much, a user can get confused. Radial menu's should be simple and have very little state change to be easily understandable.</p></li>
 </ul>
 
 
@@ -81,9 +81,11 @@
 </div>
 
 
-<p>There's still a lot of work to be done, but there should be enough available to start implementing radial menus into your own apps. It's been clear to me as touch-based apps become more complex we're going to need to find new ways to build the UI's. I think radial menu's are a great step in that direction, and am happy to see Apple pursue this route with one of their flagship apps.</p>
+<p>There's still a lot of work to be done, but there should be enough available to start implementing radial menus into your own apps (if you need them).</p>
 
-<p>Everything is open source on GitHub. Forks, pull-requests &amp; comments welcome. Especially interested in advice on how to make animations tigther &amp; cleaner.</p>
+<p>It's become clear as touch-based apps become more complex we're going to need to find new ways to express the UI's. Radial menus, when done properly, can be a great step in that direction.</p>
+
+<p>Check it out on GitHub. Pull-requests &amp; comments welcome.</p>
 
 <p><a style="font-size: 16px" href="https://github.com/bradjasper/radialmenu">Download on GitHub</a></p>
 
