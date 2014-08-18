@@ -4,7 +4,7 @@
   <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
   <link href="http://bradjasper.com/atom.xml" rel="self"/>
   <link href="http://bradjasper.com/"/>
-  <updated>2014-08-18T10:35:42-04:00</updated>
+  <updated>2014-08-18T10:39:32-04:00</updated>
   <id>http://bradjasper.com/</id>
   <author>
     <name><![CDATA[Brad Jasper]]></name>
@@ -47,12 +47,12 @@
 
 <h2>Problems with radial menus</h2>
 
-<p>Radial menu's aren't all good though.</p>
+<p>Radial menu's should be used carefully.</p>
 
 <ul>
 <li><p>They're new, and will need to be learned by a large part of the population. Apple introducing this as a standard control will help.</p></li>
 <li><p>The usability can be really poor. In iMessage the tap area is too small. This is especially bad for long-presses because the miss doesn't register for 1 or 2 seconds—much longer than a regular button.</p></li>
-<li><p>The menus's can have too much state. iMessage changes the menu depending on your current state (newly opened or recording).  If this happens too much, a user can get confused. Radial menu's should be simple and have very little state change to be easily understandable.</p></li>
+<li><p>The menus's can have too much state. iMessage changes the menu depending on your current state (newly opened or recording).  If this happens too much, a user can get confused. Radial menu's should be simple and have very little changes to the underlying structure.</p></li>
 </ul>
 
 
@@ -73,7 +73,7 @@
 </div>
 
 
-<p>The control is built to be flexible so you can customize almost everything, including the animations themselves (built using <a href="https://github.com/facebook/pop">POP</a>, Facebook's incredible animation library for iOS).</p>
+<p>But the control is built to be flexible and you can customize almost everything, including the animations themselves (built using <a href="https://github.com/facebook/pop">POP</a>, Facebook's incredible animation library for iOS).</p>
 
 <div align="center">
     <img src="https://raw.githubusercontent.com/bradjasper/RadialMenu/master/images/default-radialmenu-screencast-example.gif" />
