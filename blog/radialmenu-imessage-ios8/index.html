@@ -65,7 +65,7 @@
         <div class="eight mobile-four columns centered">
           <p>This year at Apple's World Wide Developers Conference (WWDC), they introduced a lot of new shiny toys.</p>
 
-<p>One that caught my eye in particular was the new radial menu in iMessage. Apple mentioned it was the most used app on the device, which is why when they introduced a new custom control (a radial menu, aka circle menu, pie menu) to record short audio and video messages for their newest feature, I was intrigued.</p>
+<p>One that caught my eye in particular was the new radial menu (aka circle menu, pie menu) in iMessage. Apple mentioned iMessage is the most used app on the iPhone. Which is why when they created a new and high-profile feature to record short audio and video messages, I was intrigued that they introduced a new custom control to do it.</p>
 
 <div align="center">
     <img src="/static/images/content/imessage-radialmenu-screencast-example.gif" alt="Example of new radial menu control in iMessage from iOS 8" />
@@ -73,15 +73,15 @@
 </div>
 
 
-<p>The radial menu is interesting because it's essentially the "right-click" for touch (a context menu).</p>
+<p>The radial menu is interesting because it's essentially a context menu (the "right-click" on a desktop).</p>
 
-<p>Context menus can be a UI smell, a hint that your design isn't quite right, so you have to be careful when using them. They can hide important actions &amp; make the experience of using your app worse with poor usability.</p>
+<p>Context menus can be a UI smell, a hint that your design isn't quite right, so you have to be careful when using them. They can hide important actions and when used improperly, make your user experience worse.</p>
 
 <p>In this case, however, I think the radial menus are a good choice (but still need some usability work). Why?</p>
 
 <p>In the new iMessage, recording an audio or video file accidentally could be a catastrophe (like accidentally sending your boss a discussion he wasn't supposed to hear).</p>
 
-<p>But at the same time, when you do plan on recording a quick message, it needs to be fast and efficient.</p>
+<p>But at the same time, when you do want to record a quick message, it needs to be fast and efficient.</p>
 
 <p><strong>The radial menu (with its long press + slide gesture) makes accidental actions unlikely and intentional actions easy.</strong></p>
 
@@ -105,7 +105,7 @@
 
 <h2>Recreating the iMessage radial menu control</h2>
 
-<p>I'd actually <a href="https://github.com/bradjasper/bjradialmenu">been working on a custom radial menu control</a> and finished it up the Sunday before WWDC. I decided to hold the release to see if anything compelling was introduced.</p>
+<p>I'd actually <a href="https://github.com/bradjasper/bjradialmenu">been working on a custom radial menu control</a> and finished it up the Sunday before WWDC. I decided to hold the release to see if anything interesting was introduced.</p>
 
 <p>It turned out WWDC 2014 was a huge year, and in addition to releasing the radial menu from iMessage as discussed above, Apple also introduced Swift, their new programming language.</p>
 
@@ -122,7 +122,9 @@
 <br>
 
 
-<p>The control was built with usability and flexiblity in mind&mdash;you can customize almost everything, including the animations themselves (built using <a href="https://github.com/facebook/pop">POP</a>, Facebook's incredible animation library for iOS).</p>
+<p>The control was built with usability and flexiblity in mind.</p>
+
+<p>You can customize almost everything, including the animations themselves (built using <a href="https://github.com/facebook/pop">POP</a>, Facebook's incredible animation library for iOS).</p>
 
 <br>
 
@@ -142,7 +144,7 @@
 
 <p>There's still a lot of work to be done, but it's close enough to start testing in your apps now. Pull-requests &amp; feedback welcome!</p>
 
-<p>It's become clear as touch-based apps become more complex we're going to need to find new ways to express the UI's. Radial menus, when done properly, can be a great step in that direction.</p>
+<p>It's become clear as touch-based apps become more complex we're going to need to find better ways to express the UI's. Radial menus, when done properly, can be a great step in that direction.</p>
 
 <p><a style="font-size: 16px" href="https://github.com/bradjasper/radialmenu">Download the RadialMenu control on GitHub</a>.</p>
 
