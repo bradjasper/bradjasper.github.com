@@ -4,7 +4,7 @@
   <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
   <link href="http://bradjasper.com/atom.xml" rel="self"/>
   <link href="http://bradjasper.com/"/>
-  <updated>2014-08-18T13:24:36-04:00</updated>
+  <updated>2014-08-18T13:32:57-04:00</updated>
   <id>http://bradjasper.com/</id>
   <author>
     <name><![CDATA[Brad Jasper]]></name>
@@ -20,7 +20,7 @@
     <id>http://bradjasper.com/blog/radialmenu-imessage-ios8</id>
     <content type="html"><![CDATA[<p>This year Apple released a lot of new shiny toys at the World Wide Developers Conference (WWDC).</p>
 
-<p>One that caught my eye in particular was the new radial menu (aka circle menu, pie menu) in iMessage. Apple mentioned iMessage is the most used app on the iPhone. Which is why when they created a new and high-profile feature to record short audio and video messages, I was intrigued that they introduced a new custom control to do it.</p>
+<p>One that caught my eye in particular was the new radial menu (aka circle or pie menu) in iMessage. Apple mentioned iMessage is the most used app on the iPhone. Which is why when they created a new high-profile feature to record short audio and video messages, I was intrigued that they implemented it by introducing a new custom control.</p>
 
 <div align="center">
     <img src="/static/images/content/imessage-radialmenu-screencast-example.gif" alt="Example of new radial menu control in iMessage from iOS 8" />
@@ -77,9 +77,9 @@
 <br>
 
 
-<p>The control was built with usability and flexiblity in mind.</p>
+<p>The control was built with usability in mind, but was also built to be flexible.</p>
 
-<p>You can customize almost everything, including the animations themselves (built using <a href="https://github.com/facebook/pop">POP</a>, Facebook's incredible animation library for iOS).</p>
+<p>You can customize almost everything, including the animations (built using <a href="https://github.com/facebook/pop">POP</a>, Facebook's incredible animation library for iOS).</p>
 
 <br>
 
@@ -146,7 +146,7 @@
 <br>
 
 
-<h5>More</h5>
+<h5>Links</h5>
 
 <ul>
 <li><a href="https://medium.com/@pasql/transitional-interfaces-926eb80d64e3">Transitional Interfaces</a> by <a href="https://twitter.com/pasql">@pasql</a></li>
