@@ -4,7 +4,7 @@
   <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
   <link href="http://bradjasper.com/atom.xml" rel="self"/>
   <link href="http://bradjasper.com/"/>
-  <updated>2014-08-18T10:39:32-04:00</updated>
+  <updated>2014-08-18T11:17:45-04:00</updated>
   <id>http://bradjasper.com/</id>
   <author>
     <name><![CDATA[Brad Jasper]]></name>
@@ -40,7 +40,7 @@
 
 <p><strong>The radial menu (with its long press + slide gesture) makes accidental actions unlikely and intentional actions easy.</strong></p>
 
-<p>And I think that's the point of iMessage's radial menu. It's a risky action that needs to be done easily. Not usually a good combo. Radial menu's (and other controls) can help.</p>
+<p>And I think that's the point of iMessage's radial menu. It's a risky action that needs to be done easily. This isn't usually a good combo, but in this context, a radial menu can be a good solution.</p>
 
 <br />
 
@@ -73,7 +73,7 @@
 </div>
 
 
-<p>But the control is built to be flexible and you can customize almost everything, including the animations themselves (built using <a href="https://github.com/facebook/pop">POP</a>, Facebook's incredible animation library for iOS).</p>
+<p>The control is built to be flexible and you can customize almost everything, including the animations themselves (built using <a href="https://github.com/facebook/pop">POP</a>, Facebook's incredible animation library for iOS).</p>
 
 <div align="center">
     <img src="https://raw.githubusercontent.com/bradjasper/RadialMenu/master/images/default-radialmenu-screencast-example.gif" />
@@ -85,9 +85,7 @@
 
 <p>It's become clear as touch-based apps become more complex we're going to need to find new ways to express the UI's. Radial menus, when done properly, can be a great step in that direction.</p>
 
-<p>Check it out on GitHub. Pull-requests &amp; comments welcome.</p>
-
-<p><a style="font-size: 16px" href="https://github.com/bradjasper/radialmenu">Download on GitHub</a></p>
+<p><a style="font-size: 16px" href="https://github.com/bradjasper/radialmenu">Download on GitHub</a>. Pull-requests &amp; comments welcome.</p>
 
 <br />
 
