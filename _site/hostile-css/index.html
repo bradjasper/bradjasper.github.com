@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Hostile CSS Environment Tool</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="https://raw.github.com/premasagar/cleanslate/master/cleanslate.css">
+
+        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/app.js"></script>
+
+
+		<link id="hostile_css" rel="stylesheet" ></link>
+		<a href="javascript:void(0)" id="prev_css">←</a>
+		<a href="javascript:void(0)" id="next_css">→</a>
+
+        <section>
+
+	        <h1>Hostile CSS Tool</h1>
+	        <p>This is a tool to check your code in other CSS environments. This is useful when you're creating widgets that are embedded on other sites. This tool has the CSS for some of the top sites on the Internet. Enter your code below and start the destruction (or use the <a href="javascript:(function()%7Bvar%20newscript%3Ddocument.createElement(%27script%27)%3Bnewscript.type%3D%27text/javascript%27%3Bnewscript.async%3Dtrue%3Bnewscript.src%3D%27http://127.0.0.1:4000/hostile-css/js/bookmarklet.js%3Fcb%3D%27%20%2B%20Math.random()%3B(document.getElementsByTagName(%27head%27)%5B0%5D%7C%7Cdocument.getElementsByTagName(%27body%27)%5B0%5D).appendChild(newscript)%3B%7D)()%3B">Hostile CSS Bookmarklet</a>)!</p>
+
+			<label>
+				<span class="inner">Code</span>
+				<textarea id="code"></textarea>
+				<input type="button" id="hostile" value="Make Hostile" />
+			<label>
+
+        </section>
+
+        <section class="arena_section">
+        	<div class="summary">
+        		<div id="css_summary"></div>
+	        	<div id="css_url"></div>
+	        </div>
+        	<label>
+        		<div id="arena">
+        		</div>
+        	</label>
+        </section>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-11057852-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

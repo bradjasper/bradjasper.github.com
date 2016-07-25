@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Recreating the radial menu from iMessage in iOS 8</title>
+
+  <meta name="author" content="Brad Jasper">
+  <meta name="description" content="Brad Jasper is a web and mobile freelance software developer living in North Carolina">
+  
+  
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="/static/css/foundation.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+
+  <script src="/static/js/modernizr.foundation.js"></script>
+</head>
+<body>
+
+  
+    <div class="row blog_about">
+      <div class="twelve columns">
+      Hello! I'm Brad Jasper, an independent software developer (Web/iOS/Mac), follow me on Twitter at <a href="https://twitter.com/bradjasper">@bradjasper</a>.
+        <hr>
+      </div>
+    </div>
+  
+
+  <div class="row page">
+
+  <!-- Main Blog Content -->
+  <div class="eight centered columns blog_entry" role="content">
+
+    <article>
+      
+      
+      <div class="row">
+        <div class="mobile-four ten push-two columns">
+            <h1>Recreating the radial menu from iMessage in iOS 8</h1>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="mobile-four eight columns centered">
+            <h6 class="subheader"></h6>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="eight mobile-four columns centered">
+          <p>This year Apple released a lot of new shiny toys at the World Wide Developers Conference (WWDC).</p>
+
+<p>One that caught my eye in particular was the new radial menu (aka circle or pie menu) in iMessage. Apple mentioned iMessage is the most used app on the iPhone. Which is why when they created a new high-profile feature to record short audio and video messages, I was intrigued that they implemented it by introducing a new custom control.</p>
+
+<div align="center">
+    <img src="/static/images/content/imessage-radialmenu-screencast-example.gif" alt="Example of new radial menu control in iMessage from iOS 8" />
+    <br />&nbsp;<br />
+</div>
+
+
+<p>The radial menu is interesting because it's essentially a context menu (the "right-click" on a desktop).</p>
+
+<p>Context menus can be a UI smell, a hint that your design isn't quite right, so you have to be careful when using them. They can hide important actions and when used improperly, make your user experience worse.</p>
+
+<p>In this case, however, I think the radial menus are a good choice (but still need some usability work). Why?</p>
+
+<p>In the new iMessage, recording an audio or video file accidentally could be a catastrophe (like accidentally sending your boss a discussion he wasn't supposed to hear).</p>
+
+<p>But at the same time, when you do want to record a quick message, it needs to be fast and efficient.</p>
+
+<p><strong>The radial menu (with its long press + slide gesture) makes accidental actions unlikely and intentional actions easy.</strong></p>
+
+<p>And I think that's the point of iMessage's radial menu. It's a risky action that needs to be done easily. This isn't usually a good combo, but in this context, a radial menu seems like a good solution.</p>
+
+<br />
+
+
+<h2>Problems with radial menus</h2>
+
+<p>As mentioned, radial menus should be used carefully.</p>
+
+<p><strong>They're new</strong>, and will need to be learned by a large part of the population. Apple introducing this as a standard control will help.</p>
+
+<p><strong>They're easy to mess up</strong> and poor usability can be frustrating. In iMessage the initial tap area is too small. This is especially bad for long-press gestures because the miss doesn't register for 1 or 2 seconds—much longer than a regular button.</p>
+
+<p><strong>They can be confusing</strong> if they're not extremely simple. For example, iMessage changes the menu actions depending on your current state (newly opened or recording).  If this happens too much, a user can get confused because it's not clear how to undo or cancel. Radial menus should be simple and have minimal changes to the underlying structure when they're being used.</p>
+
+<br />
+
+
+<h2>Recreating the iMessage radial menu control</h2>
+
+<p>I had actually <a href="https://github.com/bradjasper/bjradialmenu">been working on a custom radial menu control</a> and finished it up the Sunday before WWDC. I decided to hold the release to see if anything interesting was introduced.</p>
+
+<p>It turned out WWDC 2014 was a huge year, and in addition to releasing the radial menu from iMessage as discussed above, Apple also introduced Swift, their new programming language.</p>
+
+<p>So I did what any rational Cocoa developer would do, I rewrote everything from Objective-C to Swift and recreated the new iMessage radial menu.</p>
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/bradjasper/RadialMenu/master/images/imessage-radialmenu-screencast-example.gif" />
+    <br />&nbsp;<br />
+</div>
+
+
+
+
+<br>
+
+
+<p>The control was built with usability in mind, but was also built to be flexible.</p>
+
+<p>You can customize almost everything, including the animations (built using <a href="https://github.com/facebook/pop">POP</a>, Facebook's incredible animation library for iOS).</p>
+
+<br>
+
+
+
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/bradjasper/RadialMenu/master/images/default-radialmenu-screencast-example.gif" />
+    <br />&nbsp;<br />
+</div>
+
+
+
+
+<br>
+
+
+<p>There's still a lot of work to be done, but it's close enough to start testing in your apps now. Pull-requests &amp; feedback welcome!</p>
+
+<p>It's become clear as touch-based apps become more complex we're going to need to find better ways to express the UI's. Radial menus, when done properly, can be a great step in that direction.</p>
+
+<p><a style="font-size: 16px" href="https://github.com/bradjasper/radialmenu">Download the RadialMenu control on GitHub</a>.</p>
+
+<br />
+
+
+
+
+<iframe src="http://ghbtns.com/github-btn.html?user=bradjasper&repo=radialmenu&type=watch&size=large&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="160" height="30"></iframe>
+
+
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<p>Send feedback to <a href="https://twitter.com/bradjasper">@bradjasper</a></p>
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<h5>Links</h5>
+
+<ul>
+<li><a href="https://medium.com/@pasql/transitional-interfaces-926eb80d64e3">Transitional Interfaces</a> by <a href="https://twitter.com/pasql">@pasql</a></li>
+<li><a href="http://scotthurff.com/posts/what-we-can-learn-from-apples-imessage-changes-in-ios-8">What product designers can learn from iOS 8's iMessage changes</a> by <a href="https://twitter.com/scotthurff">@scotthurff</a></li>
+<li><a href="https://github.com/facebook/POP">POP</a> and <a href="https://github.com/facebook/Tweaks">Tweaks</a> from Facebook</li>
+</ul>
+
+
+        </div>
+      </div>
+
+    </article>
+
+    
+  </div>
+
+
+  <!-- End Main Content -->
+
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/foundation.min.js"></script>
+  <script src="/static/js/app.js"></script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11057852-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+</body>
+</html>

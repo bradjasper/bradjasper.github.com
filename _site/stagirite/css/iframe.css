@@ -1,0 +1,24 @@
+#stagirite_iframe {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    border: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    top: -200px;
+    z-index: 99999999;
+}
+
+#stagirite_iframe.show {
+  visibility: visible;
+  top: 50px;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+}
+
+#stagirite_iframe.hide {
+  top: -500px;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+}
