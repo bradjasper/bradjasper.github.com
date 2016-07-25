@@ -79,8 +79,14 @@ figure {
   padding-top: 100px;
 }
 
+.profile-pic {
+  max-width: 150px;
+  border-radius: 150px;
+}
+
 #home_header .nav {
-  padding-top: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin: 0 auto;
   text-align: center;
 }
@@ -128,8 +134,16 @@ figure {
 
 #home_header {
   text-align: center;
-  margin-bottom: 125px;
-  margin-top: 25px;
+  padding-top: 30px;
+}
+
+#home_header p {
+  display: inline;
+}
+
+#home_header h1 {
+  font-size: inherit;
+  display: inline;
 }
 
 code {
@@ -159,7 +173,13 @@ ul li {
 
 #portfolio {
   text-align: center;
-  padding-top: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#portfolio p {
+  text-align: justify;
+  margin-bottom: 25px;
 }
 
 .subtitle {
@@ -201,18 +221,13 @@ ul li {
   background: url('http://domaingroovy.com/media/images/background.png') repeat;
 }
 
+#footer {
+  padding-top: 30px;
+}
 
 #portfolio p {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-
-#recent_blog {
-}
-
-#footer {
-  margin-top: 130px;
 }
 
 #newsletter {
@@ -222,78 +237,4 @@ ul li {
 #home_header .pic {
     width: 100px;
     border-radius: 100%;
-}
-
-
-
-@media only screen and (max-width: 1023px) {
-  .page {
-    padding-bottom: 50px;
-  }
-  .page article {
-    padding-top: 50px;
-    padding-bottom: 25px;
-  }
-
-  figure.shadow figcaption {
-      margin-top: -40px;
-  }
-
-  #home_header {
-    margin-bottom: 100px;
-  }
-
-  .four, .row .four {
-    width: 49%;
-  }
-
-  #portfolio .product {
-    height: 400px;
-  }
-
-  #portfolio p {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-}
-
-@media only screen and (max-width: 767px) {
-  .page {
-    padding-bottom: 25px;
-  }
-  .page article {
-    padding: 0;
-  }
-
-  figure.shadow figcaption {
-      margin-top: -35px;
-  }
-
-  #home_header {
-    margin-top: 50px;
-    margin-bottom: 75px;
-  }
-
-  #portfolio .product {
-    height: 400px;
-  }
-
-  #portfolio p {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  #focus.product .img_wrap { padding-top: 42px; }
-  #subtlepatterns.product .img_wrap { padding-top: 4px; }
-  #domaingroovy.product .img_wrap { padding-top: 40px; }
-  #blogcatalog.product .img_wrap { padding-top: 140px; }
-
-  .home .nav li {
-    width: 100%;
-    padding: 5px 0;
-    display: block;
-    float: left;
-    text-align: center;
-  }
 }
