@@ -1,0 +1,303 @@
+.row {
+  width: 100%;
+}
+
+.fixed_row {
+  width: 940px;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Verdana;
+  background-color: #f2f2f0;
+}
+a {
+  font-weight: bold;
+  color: #336699;
+}
+img#me {
+  border-radius: 100px;
+}
+
+figure {
+    text-align: center;
+}
+
+figure figcaption {
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+figure.shadow figcaption {
+    margin-top: -60px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.45);
+}
+
+figure {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.blog_about {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+  font-style: italic;
+}
+.blog_about hr {
+  margin-top: 15px;
+}
+
+.blog_archive ul {
+  list-style: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.blog_archive ul li {
+  clear: both;
+  padding: 4px 0;
+}
+.blog_archive .date {
+  float: left;
+  display: block;
+  margin-right: 10px;
+  color: #888;
+  font-size: 13px;
+  padding-top: 4px;
+}
+.home {
+}
+
+.home hr {
+  padding: 20px 0;
+}
+
+.navigation {
+  padding-top: 100px;
+}
+
+#home_header .nav {
+  padding-top: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#home_header h1 {
+  font-weight: normal;
+}
+
+.home .nav {
+  list-style: none;
+  margin: 20px auto;
+  display: block;
+}
+
+.home .nav li {
+  display: inline-block;
+  text-align: center;
+}
+
+.home .nav li a {
+  display: inline-block;
+  padding: 0 25px;
+}
+.page {
+  padding-bottom: 20px;
+  max-width: 1300px;
+}
+.page article {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.casestudy .header {
+    white-space: nowrap;
+    margin-top: 75px;
+    margin-bottom: 25px;
+}
+
+.casestudy .header .icon {
+    float: left;
+    max-width: 60px;
+}
+
+.casestudy .header h1 {
+    float: left;
+    margin-left: 15px;
+    line-height: 29px;
+}
+
+#home_header {
+  text-align: center;
+  margin-bottom: 125px;
+  margin-top: 25px;
+}
+
+code {
+  color: #333;
+  display: block;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(197, 197, 197, 0.4);
+  padding: 25px;
+  overflow-x: scroll;
+  font-size: 90%;
+}
+
+ul {
+  margin-left: 15px;
+}
+
+ul li {
+  list-style-position: inside;
+}
+
+.seperator {
+  text-align: center;
+  display: block;
+  color: #ccc;
+  margin: 80px 0;
+}
+
+#portfolio {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.subtitle {
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 300;
+  color: rgba(0,0,0,.7);
+}
+
+#portfolio .product {
+  height: 500px;
+}
+
+#portfolio .img_wrap {
+  height: 200px;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+/* vertical-alignment hacks suck */
+#focus.product .img_wrap { padding-top: 28px; }
+#pppiano.product .img_wrap { padding-top: 10px; }
+#subtlepatterns.product .img_wrap { padding-top: 2px; }
+#domaingroovy.product .img_wrap { padding-top: 26px; }
+#blogcatalog.product .img_wrap { padding-top: 86px; }
+
+.product .img_wrap a.background {
+  display: block;
+  padding: 50px 20px;
+  margin: 0 auto;
+  max-width: 300px;
+  border: 1px solid rgba(0,0,0,.1);
+  background-color: #fff;
+}
+
+#domaingroovy.product .img_wrap a {
+  background: url('http://domaingroovy.com/media/images/background.png') repeat;
+}
+
+
+#portfolio p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+#recent_blog {
+}
+
+#footer {
+  margin-top: 130px;
+}
+
+#newsletter {
+  margin-top: 130px;
+}
+
+#home_header .pic {
+    width: 100px;
+    border-radius: 100%;
+}
+
+
+
+@media only screen and (max-width: 1023px) {
+  .page {
+    padding-bottom: 50px;
+  }
+  .page article {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  figure.shadow figcaption {
+      margin-top: -40px;
+  }
+
+  #home_header {
+    margin-bottom: 100px;
+  }
+
+  .four, .row .four {
+    width: 49%;
+  }
+
+  #portfolio .product {
+    height: 400px;
+  }
+
+  #portfolio p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .page {
+    padding-bottom: 25px;
+  }
+  .page article {
+    padding: 0;
+  }
+
+  figure.shadow figcaption {
+      margin-top: -35px;
+  }
+
+  #home_header {
+    margin-top: 50px;
+    margin-bottom: 75px;
+  }
+
+  #portfolio .product {
+    height: 400px;
+  }
+
+  #portfolio p {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #focus.product .img_wrap { padding-top: 42px; }
+  #subtlepatterns.product .img_wrap { padding-top: 4px; }
+  #domaingroovy.product .img_wrap { padding-top: 40px; }
+  #blogcatalog.product .img_wrap { padding-top: 140px; }
+
+  .home .nav li {
+    width: 100%;
+    padding: 5px 0;
+    display: block;
+    float: left;
+    text-align: center;
+  }
+}

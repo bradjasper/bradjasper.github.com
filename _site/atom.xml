@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Brad Jasper, Raleigh Full-stack Software Developer]]></title>
+  <link href="http://bradjasper.com/atom.xml" rel="self"/>
+  <link href="http://bradjasper.com/"/>
+  <updated>2014-08-18T13:43:50-04:00</updated>
+  <id>http://bradjasper.com/</id>
+  <author>
+    <name><![CDATA[Brad Jasper]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Recreating the radial menu from iMessage in iOS 8]]></title>
+    <link href="http://bradjasper.com/blog/radialmenu-imessage-ios8/"/>
+    <updated>2014-08-18T09:17:00-04:00</updated>
+    <id>http://bradjasper.com/blog/radialmenu-imessage-ios8</id>
+    <content type="html"><![CDATA[<p>This year Apple released a lot of new shiny toys at the World Wide Developers Conference (WWDC).</p>
+
+<p>One that caught my eye in particular was the new radial menu (aka circle or pie menu) in iMessage. Apple mentioned iMessage is the most used app on the iPhone. Which is why when they created a new high-profile feature to record short audio and video messages, I was intrigued that they implemented it by introducing a new custom control.</p>
+
+<div align="center">
+    <img src="/static/images/content/imessage-radialmenu-screencast-example.gif" alt="Example of new radial menu control in iMessage from iOS 8" />
+    <br />&nbsp;<br />
+</div>
+
+
+<p>The radial menu is interesting because it's essentially a context menu (the "right-click" on a desktop).</p>
+
+<p>Context menus can be a UI smell, a hint that your design isn't quite right, so you have to be careful when using them. They can hide important actions and when used improperly, make your user experience worse.</p>
+
+<p>In this case, however, I think the radial menus are a good choice (but still need some usability work). Why?</p>
+
+<p>In the new iMessage, recording an audio or video file accidentally could be a catastrophe (like accidentally sending your boss a discussion he wasn't supposed to hear).</p>
+
+<p>But at the same time, when you do want to record a quick message, it needs to be fast and efficient.</p>
+
+<p><strong>The radial menu (with its long press + slide gesture) makes accidental actions unlikely and intentional actions easy.</strong></p>
+
+<p>And I think that's the point of iMessage's radial menu. It's a risky action that needs to be done easily. This isn't usually a good combo, but in this context, a radial menu seems like a good solution.</p>
+
+<br />
+
+
+<h2>Problems with radial menus</h2>
+
+<p>As mentioned, radial menus should be used carefully.</p>
+
+<p><strong>They're new</strong>, and will need to be learned by a large part of the population. Apple introducing this as a standard control will help.</p>
+
+<p><strong>They're easy to mess up</strong> and poor usability can be frustrating. In iMessage the initial tap area is too small. This is especially bad for long-press gestures because the miss doesn't register for 1 or 2 seconds—much longer than a regular button.</p>
+
+<p><strong>They can be confusing</strong> if they're not extremely simple. For example, iMessage changes the menu actions depending on your current state (newly opened or recording).  If this happens too much, a user can get confused because it's not clear how to undo or cancel. Radial menus should be simple and have minimal changes to the underlying structure when they're being used.</p>
+
+<br />
+
+
+<h2>Recreating the iMessage radial menu control</h2>
+
+<p>I had actually <a href="https://github.com/bradjasper/bjradialmenu">been working on a custom radial menu control</a> and finished it up the Sunday before WWDC. I decided to hold the release to see if anything interesting was introduced.</p>
+
+<p>It turned out WWDC 2014 was a huge year, and in addition to releasing the radial menu from iMessage as discussed above, Apple also introduced Swift, their new programming language.</p>
+
+<p>So I did what any rational Cocoa developer would do, I rewrote everything from Objective-C to Swift and recreated the new iMessage radial menu.</p>
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/bradjasper/RadialMenu/master/images/imessage-radialmenu-screencast-example.gif" />
+    <br />&nbsp;<br />
+</div>
+
+
+
+
+<br>
+
+
+<p>The control was built with usability in mind, but was also built to be flexible.</p>
+
+<p>You can customize almost everything, including the animations (built using <a href="https://github.com/facebook/pop">POP</a>, Facebook's incredible animation library for iOS).</p>
+
+<br>
+
+
+
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/bradjasper/RadialMenu/master/images/default-radialmenu-screencast-example.gif" />
+    <br />&nbsp;<br />
+</div>
+
+
+
+
+<br>
+
+
+<p>There's still a lot of work to be done, but it's close enough to start testing in your apps now. Pull-requests &amp; feedback welcome!</p>
+
+<p>It's become clear as touch-based apps become more complex we're going to need to find better ways to express the UI's. Radial menus, when done properly, can be a great step in that direction.</p>
+
+<p><a style="font-size: 16px" href="https://github.com/bradjasper/radialmenu">Download the RadialMenu control on GitHub</a>.</p>
+
+<br />
+
+
+
+
+<iframe src="http://ghbtns.com/github-btn.html?user=bradjasper&repo=radialmenu&type=watch&size=large&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="160" height="30"></iframe>
+
+
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<p>Send feedback to <a href="https://twitter.com/bradjasper">@bradjasper</a></p>
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<h5>Links</h5>
+
+<ul>
+<li><a href="https://medium.com/@pasql/transitional-interfaces-926eb80d64e3">Transitional Interfaces</a> by <a href="https://twitter.com/pasql">@pasql</a></li>
+<li><a href="http://scotthurff.com/posts/what-we-can-learn-from-apples-imessage-changes-in-ios-8">What product designers can learn from iOS 8's iMessage changes</a> by <a href="https://twitter.com/scotthurff">@scotthurff</a></li>
+<li><a href="https://github.com/facebook/POP">POP</a> and <a href="https://github.com/facebook/Tweaks">Tweaks</a> from Facebook</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Case Study: Focus]]></title>
+    <link href="http://bradjasper.com/blog/case-study-focus/"/>
+    <updated>2014-02-08T14:48:00-05:00</updated>
+    <id>http://bradjasper.com/blog/case-study-focus</id>
+    <content type="html"><![CDATA[<p><a href="http://www.heyfocus.com">Focus</a> is a Mac productivity app that blocks distracting websites. This is a write-up of some of the decisions that went into building the product. If you're interested you can <a href="http://www.heyfocus.com">download Focus</a> or <a href="https://github.com/bradjasper/Focus">view the source code</a> on GitHub.</p>
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<h3>The Idea</h3>
+
+<p>Focus is a small Mac app that blocks distracting websites and services.</p>
+
+<p>I built it because when I'm working, I don't want to be distracted. But computers are getting better and better at distracting and interrupting us.</p>
+
+<p>Focus is an easy way to say "I'm working" and shut everything out.</p>
+
+<div class="seperator"></div>
+
+
+<h3>Evaluating the Market</h3>
+
+<p>There were already a few existing products that block distracting websites (the least of which is /etc/hosts), but none them hit all of my goals:</p>
+
+<ul>
+<li>Simple, intuitive, stays out of your way</li>
+<li>1-click toggle from the menu bar</li>
+<li>Easily undo (not "forcing" productivity)</li>
+<li>Works without browser restart (some have internal DNS caches)</li>
+<li>Works on instant messenger services</li>
+<li>Only requires admin password one time</li>
+<li>Ability to show custom message on blocked website</li>
+</ul>
+
+
+<p>Since I didn't find any apps that satisfied my requirements, I decided to start building Focus.</p>
+
+<p>For larger apps I would have spent more time validating the idea with customers. But since Focus was a small app that I personally wanted, I wasn't as worried about this.</p>
+
+<div class="seperator"></div>
+
+
+<h3>Building the Product</h3>
+
+<p>Focus is a menu bar app.</p>
+
+<p><figure>
+<img src="/static/images/content/menubar-icon-states.png" alt="Focus menu bar icon states" />
+<figcaption>Focus modes in the menu bar (top to bottom): off, on, on (grayscale)</figcaption>
+</figure></p>
+
+<p>It doesn't have any windows (besides it's preferences window).  This means I didn't have to write lots of UI or view code—rather most of the work on Focus was in the background.</p>
+
+<p><figure class="shadow">
+<img src="/static/images/content/preferences-window.png" alt="Focus preferences window" />
+<figcaption>Preferences window</figcaption>
+</figure></p>
+
+<p><figure class="shadow">
+<img src="/static/images/content/blocked-sites-window.png" alt="Focus blocked sites window" />
+<figcaption>Blocked websites window</figcaption>
+</figure></p>
+
+<p>Here are some of the major pieces of Focus that work in the background.</p>
+
+<br>
+
+
+<h4>Privileged Helper Tool</h4>
+
+<p>Under-the-hood, Focus requires an administrator password for many of the tasks it performs, but constantly entering your password is a bad experience.</p>
+
+<p>There are a few ways to solve this, but the best I found was using a privileged helper tool, which gets installed the first time the app is run. The helper tool keeps the escalated privileges and can receive messages from Focus to do the tasks it needs without asking the user for their password over and over.</p>
+
+<p><figure class="shadow">
+<img src="/static/images/content/password-prompt.png" alt="Privileged Helper Tool installation" />
+<figcaption>Example of helper tool being installed so password is only prompted once</figcaption>
+</figure></p>
+
+<p>Some other apps consider this password prompt a feature because it adds friction.</p>
+
+<p>Focus doesn't take this approach. It's goal is to block interruptions and gently remind you when you get distracted—but not to force or annoy you.</p>
+
+<p>If you want to get back to your blocked websites, you should be able to.</p>
+
+<br>
+
+
+<h4>Blocking and Intercepting Websites</h4>
+
+<p>There are many ways to block and intercept websites, here's a few Focus explored:</p>
+
+<br>
+
+
+<p><strong>/etc/hosts</strong>:
+The easiest way to block distracting websites is by using /etc/hosts, and this is what Focus originally used.</p>
+
+<p>Unfortunately, some browsers have an internal cache and require a restart. This was painful enough to search for alternatives.</p>
+
+<br>
+
+
+<p><strong>IPFW/PF</strong>:
+Mac OS X has built-in firewalls that can block IP's really well. They can even slow down traffic rather than block it directly, which is a great feature.</p>
+
+<p>But managing the HOST -> IP conversion is a pain. Some hosts resolve to many IP addresses and resolving them can be slow.</p>
+
+<p>Also, intercepting webpages and displaying custom content was harder than with other methods.</p>
+
+<br>
+
+
+<p><strong>DNS</strong>:
+Setting up a custom DNS server that blocks host lookups is an option, but it also takes responsibility for the entire Internet connection, which is a big liability.</p>
+
+<p>Plus, it is somewhat common for people to use custom DNS servers&mdash;so overal this wasn't the best option.</p>
+
+<br>
+
+
+<p><strong>Automatic Proxy Configuration</strong>:
+The option Focus ended up using was called Automatic Proxy Configuration. Mac OS X has this built-in and is a way to configure proxies for certain sites dynamically—perfect!</p>
+
+<p>This allowed Focus to intercept websites and display a custom message, without taking control of the entire network connection.</p>
+
+<p>It relies on an Automatic Proxy Configuration file (PAC file), which is a file that contains a single Javascript function with instructions on routing.</p>
+
+<p>This is what it looks like:</p>
+
+<pre><code>function FindProxyForURL(url, host) {
+    if (dnsDomainIs(host,'facebook.com')) return 'PROXY custom.proxy1.com:8080';
+    if (dnsDomainIs(host,'twitter.com')) return 'PROXY custom.proxy2.com:8080';
+    // ...
+    return 'DIRECT';
+}
+</code></pre>
+
+<br>
+
+
+<br>
+
+
+<p>This ended up being a great option for Focus and it satisfied all major goals.</p>
+
+<div class="seperator"></div>
+
+
+<h4>Serving a custom message instead of blocked website</h4>
+
+<br>
+
+
+<p>One unique feature of Focus is intercepting the blocked website and displaying a custom message (a motivational quote by default).</p>
+
+<p><figure>
+<img src="/static/images/content/reddit-blocked.png" alt="Focus block message" />
+<figcaption>Example of Focus blocking a website</figcaption>
+</figure></p>
+
+<p>This is accomplished using the Automatic Proxy Configuration option described above with a custom proxy server that can intercept requests and block them.</p>
+
+<p>But it turns out you don't actually need a full proxy server to accomplish this, rather just a regular simple HTTP server.</p>
+
+<p>On HTTP requests you can return a custom response, which works as expected.</p>
+
+<p>On HTTPS requests, browsers are confused by the invalid proxy response and display a broken webpage&mdash;which is a suitable compromise for Focus (the alternative is installing custom root ceritificates, which is really insecure).</p>
+
+<div class="seperator"></div>
+
+
+<h3>No Sandbox, No App Store</h3>
+
+<br>
+
+
+<p>One bad thing I learned early on into the development of Focus was that it couldn't be in the App Store.</p>
+
+<p>It requires administrator privileges because it modifies system-level network settings. Unfortunately this means Focus can't stay in a sandbox, so it can't be in the App Store.</p>
+
+<p>I decided to build it anyway, but expect this will have a pretty significant negative effect on sales.</p>
+
+<div class="seperator"></div>
+
+
+<h3>Unfinished Promotional Video</h3>
+
+<br>
+
+
+<p>I wanted to do something fun and creative to promote Focus and decided on making a stop-motion promotional video.</p>
+
+<p>I'd never filmed a promo video before, so started making short test videos and iterating on early concepts to try to learn and improve.</p>
+
+<p>The videos improved significantly, but ultimately I decided not to pursue the promo video after I learned Focus couldn't be in the App Store. The size of the video project was growing and it was hard to justify that with a smaller app.</p>
+
+<p>The early videos were just testing concepts and were never supposed to be released, but here is the first one :)</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/QY65UC4hYgI?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+<div class="seperator"></div>
+
+
+<h3>Conclusion</h3>
+
+<p>Focus was a fun app to build and I learned a lot during the process. I'm really happy with how everything came together and think it solves the problem of blocking distracting websites well.</p>
+
+<p>Focus seems like a very simple app and in many ways it is. There are, however, a lot of decisions that happened behind-the-scenes to make everything come together in an elegant way. This was an outline of some of those biggest decisions and the reasoning behind them&mdash;hope you found it useful!</p>
+
+<p>If you're interested you can <a href="http://www.heyfocus.com">download Focus</a> or <a href="https://github.com/bradjasper/Focus">view the source code on GitHub</a>.</p>
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<br>
+
+
+<p><strong>Like this write-up?</strong> You can hire the developer behind it to work on your awesome project! My name is Brad and I'm a web &amp; mobile developer who loves building great products with interesting people.</p>
+
+<p><a href="mailto:contact@bradjasper.com">Email me</a> to setup a time to talk about your project and see how I can help.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Follow your favorite people on Hacker News]]></title>
+    <link href="http://bradjasper.com/blog/follow-a-hacker-news-users-comments-with-rss/"/>
+    <updated>2013-05-17T13:09:00-04:00</updated>
+    <id>http://bradjasper.com/blog/follow-a-hacker-news-users-comments-with-rss</id>
+    <content type="html"><![CDATA[<p>On Hacker News I have always wanted a way to stay up-to-date with people who make really insightful comments.</p>
+
+<p>There's a lot of great stuff out there&mdash;but it's hard to keep up with it all. This is actually a perfect use-case for RSS: high-quality content that's not updated very frequently.</p>
+
+<p>Unfortunately, Hacker News doesn't support RSS for comments out of the box.</p>
+
+<p>So, with some help from the official <a href="https://www.hnsearch.com/api">Hacker News Search API</a> and <a href="http://pipes.yahoo.com/pipes/">Yahoo! Pipes</a>, I strung together an RSS feed that pulls in the latest comments from any user.</p>
+
+<blockquote>
+http://pipes.yahoo.com/pipes/pipe.run?_id=9c88dd117c9c12408e5f37e5a610ad4a&_render=rss&username=<strong>USERNAME</strong>
+</blockquote>
+
+
+<p>Replace <strong>USERNAME</strong> in the URL above with any valid Hacker News username, and you will receive an RSS feed of their 50 most recent comments.</p>
+
+<p><em> Want these in your inbox instead? Try this <a href="https://ifttt.com/recipes/4447">IFTTT recipe</a>. Want all comment feeds merged into one? Try this <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=35b9f23463805cb43e8f674256319b58">Yahoo! Pipes recipe</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

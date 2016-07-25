@@ -1,0 +1,205 @@
+<script>
+var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+var eventer = window[eventMethod];
+var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+
+// Listen to message from child window
+eventer(messageEvent,function(e) {
+//  alert("Got message from parent");
+},false);
+
+parent.postMessage({event: "loaded"}, "*");
+
+</script>
+
+<link rel="stylesheet" href="http://bradjasper.com/stagirite/css/bookmarklet.css" />
+<body class="first-run">
+<div id="stagirite_bookmarklet">
+  <div class="flipper">
+    <div class="front-side face">
+      <div class="container" id="root">
+        <div class="wrapper">
+          <a class="settings_wheel" href="#" onclick="show_settings()">
+            <img class="settings" src="http://bradjasper.com/stagirite/images/settings.png" width="10" />
+            <img class="triangle" src="http://bradjasper.com/stagirite/images/triangle-down.png" width="10" />
+          </a>
+          <h1>Save this website in</h1>
+          <ul>
+            <li><a href="#" onclick="show_confirmation()" class="quick-save">Quick save (Read It Later)</a></li>
+            <li><a href="#" onclick="stacker.add_by_id('personal_space');" class="folder">Your Personal Space</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container" id="personal_space">
+          <a class="settings_wheel" href="#" onclick="show_settings()">
+            <img class="settings" src="http://bradjasper.com/stagirite/images/settings.png" width="10" />
+            <img class="triangle" src="http://bradjasper.com/stagirite/images/triangle-down.png" width="10" />
+          </a>
+        <div class="wrapper">
+          <h1><a href="#" onclick="stacker.pop();" class="back">&laquo; back</a> Save this website in Your Personal Space</h1>
+          <ul>
+            <li><a href="#" onclick="show_save()" class="folder">Save to current folder</a></li>
+            <li class="divider"><hr></li>
+            <li><a href="#" onclick="show_save()" class="folder">Read It Later</a></li>
+            <li class="divider"><hr></li>
+            <li><a href="#" onclick="show_save()" class="folder">Technology</a></li>
+            <li><a href="#" onclick="show_save()" class="folder">Startups</a></li>
+            <li><a href="#" onclick="show_save()" class="folder">Business</a></li>
+            <li class="divider"><hr></li>
+            <li><a href="#" onclick="show_save()" class="folder">History</a></li>
+            <li><a href="#" onclick="show_save()" class="folder">Arts &amp; Entertainment</a></li>
+            <li><a href="#" onclick="show_save()" class="folder">Research</a></li>
+            <li class="divider"><hr></li>
+            <li><a href="#" onclick="show_save()" class="folder">Fun</a></li>
+            <li><a href="#" onclick="show_save()" class="folder">Pop Culture</a></li>
+            <li class="divider"><hr></li>
+            <li><a href="#" onclick="create_new_folder()">Create New Folder...</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container" id="save">
+          <a class="settings_wheel" href="#" onclick="show_settings()">
+            <img class="settings" src="http://bradjasper.com/stagirite/images/settings.png" width="10" />
+            <img class="triangle" src="http://bradjasper.com/stagirite/images/triangle-down.png" width="10" />
+          </a>
+        <div class="wrapper">
+          <h1><a href="#" onclick="stacker.pop();" class="back">&laquo; back</a> Confirm Save</h1>
+          <div class="subwrapper">
+            <table>
+              <tr>
+                <th>Title</th>
+                <td>Interesting URL</td>
+              </tr>
+              <tr>
+                <th>URL</th>
+                <td>http://interesting-url.com</td>
+              </tr>
+              <tr>
+                <th>Container</th>
+                <td>Container 1 &raquo; Container 2</td>
+              </tr>
+              <tr>
+                <th>Tags</th>
+                <td><input /></td>
+              </tr>
+              <tr>
+                <th>Comment</th>
+                <td><textarea></textarea></td>
+              </tr>
+            </table>
+            <button onclick="show_confirmation()">Save Link</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="confirmation">
+
+        <div class="saving">
+            <h1>Saving Link...</h1>
+            <br>
+            <br>
+            <img src="http://bradjasper.com/stagirite/images/spinner.gif" />
+            <br>
+            <br>
+            <h2>Saving Your Link</h2>
+        </div>
+        <div class="saved">
+            <h1>Successfully saved link!</h1>
+            <br>
+            <img src="http://bradjasper.com/stagirite/images/checkmark.png" />
+            <h2>Your link has been successfully saved</h2>
+            <small><a href="http://www.stagirite.com/">View saved link</a></small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+
+
+<script>
+function Stacker(initial) {
+  this.stack = [];
+
+  this.hide_left = function(container) {
+    console.log("Hiding Left = " + container.id);
+    container.style.left = "-275px";
+  };
+
+  this.hide_right = function(container) {
+    console.log("Hiding Left = " + container.id);
+    container.style.left = "275px";
+  };
+
+  this.show = function(container) {
+    console.log("Showing = " + container.id);
+    container.style.left = "0px";
+  };
+
+  this.add = function(container) {
+
+    if (this.stack.length > 0) {
+      this.hide_left(this.stack[this.stack.length-1]);
+    }
+
+    this.show(container);
+    this.stack.push(container);
+  };
+
+  this.add_by_id = function(container_id) {
+    var container = document.getElementById(container_id);
+    if (container) {
+      this.add(container);
+    }
+  }
+
+  this.pop = function() {
+    if (this.stack.length > 1) {
+      this.hide_right(this.stack.pop());
+      this.show(this.stack[this.stack.length-1]);
+    }
+  }
+
+  if (initial) {
+    this.add(initial);
+  }
+}
+
+var stacker = new Stacker(document.getElementById("root"));
+
+function show_save() {
+  stacker.add_by_id("save");
+}
+
+function show_confirmation() {
+  stacker.add_by_id("confirmation");
+  setTimeout(function() {
+    document.querySelector("#confirmation .saving").style.display = "none";
+    document.querySelector("#confirmation .saved").style.display = "block";
+    setTimeout(function() {
+      close_bookmarklet();
+    }, 1800);
+  }, 1500);
+}
+
+function close_bookmarklet() {
+  parent.postMessage({event: "close"}, "*");
+}
+
+function create_new_folder() {
+  folder = prompt("Enter a new folder name to create...");
+  show_save();
+}
+
+function show_settings() {
+  alert("Settings not available in this version. Try the regular bookmarklet");
+}
+
+function hide_settings() {
+}
+
+</script>
